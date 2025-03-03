@@ -143,6 +143,10 @@
     cursor: pointer;
 }
 
+.menu-mobile-button_close {
+    background-image: url("../images/menu-mobile-button_close.svg");
+}
+
 @media (max-width: 900px) {
     .header {
         padding: 10px 16px;

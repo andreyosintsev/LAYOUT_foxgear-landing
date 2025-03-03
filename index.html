@@ -8,24 +8,16 @@
     <link rel="stylesheet" href="css/common/normalize.css">
     <link rel="stylesheet" href="css/common/consts.css">
     <link rel="stylesheet" href="blocks/logo/css/logo.css">
+    <link rel="stylesheet" href="blocks/menu-mobile/css/menu-mobile.css">
     <link rel="stylesheet" href="blocks/header/css/header.css">
     <link rel="stylesheet" href="css/pages/index.css">
 </head>
 <body>
     <div class="menu-mobile hidden">
-        <div class="menu-mobile__close"></div>
         <div class="logo menu-mobile__logo">
             <a class="logo__link" href="index.html" title="АНО ТАКОЕ - главная страница">
-                <img class="logo__image" src="blocks/logo/images/logo.png" alt="АНО ТАКОЕ">
+                <img class="logo__image" src="blocks/logo/images/logo.png" alt="FoxGear Logo">
             </a>
-        </div>
-        <div class="menu-mobile__contacts">
-            <p class="menu-mobile__contacts-p">
-                +7 (925) 003 62 78
-            </p>
-            <p class="menu-mobile__contacts-p">
-                takoeano@yandex.ru
-            </p>
         </div>
         <ul class="menu-mobile__items">
             <li class="menu-mobile__item">
@@ -56,6 +48,17 @@
                 <a class="menu-mobile__link" href="#" title="Контакты">Контакты</a>
             </li>
         </ul>
+        <div class="menu-mobile__contacts">
+            <p class="menu-mobile__motto">
+                We work for your joy and happiness!
+            </p>
+            <p class="menu-mobile__contacts-p">
+                <a class="menu-mobile__link" href="tel:+71234564890">+7 (123) 456 48 90</a>
+            </p>
+            <p class="menu-mobile__contacts-p">
+                <a class="menu-mobile__link" href="mailto:takoeano@yandex.ru">takoeano@yandex.ru</a>
+            </p>
+        </div>
     </div>
     <header class="header">
         <div class="header__wrapper">
@@ -122,5 +125,7 @@
             </nav>
         </div>
     </header>
+
+    <script src="scripts/menu-mobile.js"></script>
 </body>
 </html>
