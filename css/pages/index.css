@@ -1,0 +1,240 @@
+body {
+    color: var(--text-color-main, #000000);
+    font-family: var(--text-family-main, sans-serif);
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: var(--content-max-width, 1920px);
+    margin: 0 auto;
+}
+
+.wrapper__page {
+    background-color: var(--back-white, #F7F9F8);
+}
+
+.first-screen {
+    position: relative;
+}
+
+.hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+
+    padding: 128px clamp(6px, calc(49.2vw - 570px), 375px) 0;
+
+    width: 100%;
+    height: clamp(824px, calc(824px + 199 * ((100vw - 360px) / 1560)), 1023px);
+
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: url("../../images/hero.webp") no-repeat center;
+    background-size: cover;
+
+    /* Плавное смещение через translateX */
+    transform: translateX(var(--offset));
+}
+
+.hero__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: start;
+    align-items: center;
+
+    color: var(--white, #FFFFFF);
+    z-index: 5;
+}
+
+.hero__about {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__info {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+
+    background: url("../../images/info.svg") center no-repeat;
+    background-size: 18px 18px;
+}
+
+.hero__about {
+    margin-bottom: 23px;
+}
+
+.hero__info-link {
+    color: inherit;
+
+    font-style: italic;
+
+    line-height: 24px;
+
+    text-decoration: underline;
+}
+
+.hero__header {
+    margin: 0 0 20px 0;
+    padding: 0;
+
+    font-size: 80px;
+    font-weight: 400;
+
+    line-height: 94px;
+    letter-spacing: -3px;
+}
+
+.hero__subtitle {
+    font-size: 25px;
+    line-height: 29px;
+}
+
+.hero__payment {
+    display: inline-block;
+
+    justify-self: end;
+}
+
+.payment {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateY(clamp(15%, 15% + 12vw, 50%));
+}
+
+.content {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 124px 0 150px;
+}
+
+.content__slider {
+    margin: 0 0 88px;
+}
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+    padding-top: 0;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    width: 9px;
+    height: 9px;
+    margin: 5px 8px;
+
+    background: var(--green, #37CDAF);
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 9px;
+    height: 9px;
+    margin: 5px 8px;
+
+    background: var(--gray-light, #DCDCDC);
+}
+
+.projects__header {
+    margin-bottom: 35px;
+}
+
+.projects {
+    margin-bottom: 180px;
+}
+
+.contacts-us__header {
+    margin-bottom: 36px;
+}
+
+@media (max-width: 1200px) {
+    .first-screen {
+        height: calc(0.03929 * 100vw + 1090.86px);
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        justify-content: center;
+        align-items: center;
+
+        padding: 106px 16px 0;
+    }
+
+    .hero__title {
+        justify-self: center;
+    }
+
+    .hero__about {
+        margin-bottom: 12px;
+    }
+
+    .hero__header {
+        margin-bottom: 15px;
+
+        font-size: 55px;
+
+        line-height: 64px;
+    }
+
+    .hero__subtitle {
+        margin-bottom: 49px;
+
+        font-size: 18px;
+
+        line-height: 21px;
+    }
+
+    .hero__payment {
+        justify-self: center;
+    }
+
+    .payment {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, calc(100% + 5vw));
+        width: calc(100% - 32px);
+    }
+
+    .content {
+        padding: 124px 16px 70px;
+    }
+
+    .content__slider {
+        margin-bottom: 70px;
+    }
+
+    .projects {
+        margin-bottom: 70px;
+    }
+
+    .projects__header {
+        margin-bottom: 27px;
+
+        text-align: center;
+    }
+
+    .contacts-us__header {
+        margin-bottom: 30px;
+
+        text-align: center;
+    }
+}

@@ -1,8 +1,8 @@
 /*
-    ПРОЕКТ "АНО ТАКОЕ"
+    ПРОЕКТ "FOXGEAR LANDING"
     ШРИФТОВЫЕ И ЦВЕТОВЫЕ КОНСТАНТЫ
 
-    Последняя версия: 13.02.2025
+    Последняя версия: 03.03.2025
 
     UPD: начальная версия
 */
@@ -10,6 +10,13 @@
 @import url("./fonts.css");
 
 :root {
+
+/*
+    Размеры экрана
+*/
+
+    --max-content-width:        1920px;
+    --wrapper-width:            1200px;
 
 /*
     Основная палитра
@@ -42,8 +49,9 @@
     Шрифты
 */
 
-    --text-family-main:        Roboto, arial, sans-serif;
-    --text-family-featured:    Montserrat, arial, sans-serif;
+    --text-family-main:         Montserrat, arial, sans-serif;
+    --text-family-featured:     Roboto, arial, sans-serif;
+
 
     --text-color-main:         var(--black);
     --text-color-menu:         var(--black-light)
@@ -93,7 +101,7 @@
     Кнопки
 */
 
-    --button-normal-background:         var(--green);
+    /* --button-normal-background:         var(--green);
     --button-normal-color:              var(--white);
     --button-normal-background_hover:   var(--green-light);
 
@@ -105,7 +113,7 @@
     --button-outlined-background:       var(--white);
     --button-outlined-color:            var(--black);
     --button-outlined-border:           var(--gray-light);
-    --button-outlined-background_hover: var(--gray-lighter);
+    --button-outlined-background_hover: var(--gray-lighter); */
 
     /* --button-normal-background:         var(--blue);
     --button-normal-color:              var(--white);
