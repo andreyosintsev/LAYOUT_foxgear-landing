@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="blocks/menu-mobile/css/menu-mobile.css">
     <link rel="stylesheet" href="blocks/header/css/header.css">
     <link rel="stylesheet" href="blocks/hero-slider/css/hero-slider.css">
+    <link rel="stylesheet" href="blocks/section-title/css/section-title.css">
+    <link rel="stylesheet" href="blocks/video/css/video.css">
     <link rel="stylesheet" href="css/pages/index.css">
 </head>
 <body>
@@ -129,28 +131,37 @@
         </div>
     </header>
     <main class="main">
-        <div class="wrapper">
-            <div class="hero-slider">
-                <!--div class="hero-slider__button hero-slider__button_prev"></!--div-->
-                <div class="hero-slider__cards owl-carousel owl-theme">
-                    <div class="hero-slider__card">
-                        <a class="hero-slider__link" href="#" title="FoxGear - кресла и аксессуары">
-                            <img class="hero-slider__image" src="../../images/hero-slider/slide1.webp" alt="FoxGear - кресла и аксессуары">
-                        </a>
-                    </div>
-                    <div class="hero-slider__card">
-                        <a class="hero-slider__link" href="#" title="FoxGear - кресла и аксессуары">
-                            <img class="hero-slider__image" src="../../images/hero-slider/slide2.webp" alt="FoxGear - кресла и аксессуары">
-                        </a>
-                    </div>
-                    <div class="hero-slider__card">
-                        <a class="hero-slider__link" href="#" title="FoxGear - кресла и аксессуары">
-                            <img class="hero-slider__image" src="../../images/hero-slider/slide3.webp" alt="FoxGear - кресла и аксессуары">
-                        </a>
-                    </div>
+        <div class="hero-slider">
+            <!--div class="hero-slider__button hero-slider__button_prev"></!--div-->
+            <div class="hero-slider__cards owl-carousel owl-theme">
+                <div class="hero-slider__card">
+                    <a class="hero-slider__link" href="#" title="FoxGear - кресла и аксессуары">
+                        <img class="hero-slider__image" src="../../images/hero-slider/slide1.webp" alt="FoxGear - кресла и аксессуары">
+                    </a>
                 </div>
-                <!--div class="hero-slider__button hero-slider__button_next"></!--div-->
+                <div class="hero-slider__card">
+                    <a class="hero-slider__link" href="#" title="FoxGear - кресла и аксессуары">
+                        <img class="hero-slider__image" src="../../images/hero-slider/slide2.webp" alt="FoxGear - кресла и аксессуары">
+                    </a>
+                </div>
+                <div class="hero-slider__card">
+                    <a class="hero-slider__link" href="#" title="FoxGear - кресла и аксессуары">
+                        <img class="hero-slider__image" src="../../images/hero-slider/slide3.webp" alt="FoxGear - кресла и аксессуары">
+                    </a>
+                </div>
             </div>
+            <!--div class="hero-slider__button hero-slider__button_next"></!--div-->
+        </div>
+        <div class="wrapper">
+            <section class="technology">
+                <h2 class="section-title technology__header">Teхнология кресел FoxGear</h2>
+                <div class="video">
+                    <video class="video__player" controls autoplay playsinline muted loop>
+                        <source src="../../video/video.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео
+                    </video>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -168,17 +179,22 @@
                 autoplayTimeout: 5000,
                 nav: false,
                 dots: true,
-                animateIn: "fadeInLeft",
-                animateOut: "fadeOutLeft",
                 responsive: {
-                    0: { items: 1 },
-                    1200: { items: 3 }
+                    0: { items: 1,
+                        stagePadding: 0,
+                        autoWidth: false,
+                        autoHeight: true,
+                    },
+                    1200: {
+                        items: 3,
+                        stagePadding: 80,
+                        autoWidth: true,
+                        autoHeight: false,
+                    }
                 },
                 center: true,
-                stagePadding: 80,
                 pullDrag: true,
-                autoWidth: true,
-                autoHeight: false,
+
             });
             $(".hero-slider__button_next").click(function() {
                 $owl.trigger("next.owl.carousel");

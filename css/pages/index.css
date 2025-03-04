@@ -9,17 +9,10 @@ body {
     display: none !important;
 }
 
-.wrapper {
-    width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
-    padding: 50px 16px;
-}
-
 .hero-slider {
     width: 100%;
     max-width: 100%;
-    margin: 0 auto 50px;
+    margin: 50px auto;
 }
 
 .content {
@@ -29,29 +22,18 @@ body {
     padding: 124px 0 150px;
 }
 
-.content__slider {
-    margin: 0 0 88px;
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 16px;
 }
 
-.owl-theme .owl-nav.disabled+.owl-dots {
-    padding-top: 0;
+.technology__header {
+    margin-bottom: 25px;
 }
 
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-    width: 9px;
-    height: 9px;
-    margin: 5px 8px;
-
-    background: var(--green, #37CDAF);
-}
-
-.owl-theme .owl-dots .owl-dot span {
-    width: 9px;
-    height: 9px;
-    margin: 5px 8px;
-
-    background: var(--gray-light, #DCDCDC);
-}
 
 .projects__header {
     margin-bottom: 35px;
@@ -66,74 +48,12 @@ body {
 }
 
 @media (max-width: 1200px) {
-    .first-screen {
-        height: calc(0.03929 * 100vw + 1090.86px);
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        justify-content: center;
-        align-items: center;
-
-        padding: 106px 16px 0;
-    }
-
-    .hero__title {
-        justify-self: center;
-    }
-
-    .hero__about {
-        margin-bottom: 12px;
-    }
-
-    .hero__header {
-        margin-bottom: 15px;
-
-        font-size: 55px;
-
-        line-height: 64px;
-    }
-
-    .hero__subtitle {
-        margin-bottom: 49px;
-
-        font-size: 18px;
-
-        line-height: 21px;
-    }
-
-    .hero__payment {
-        justify-self: center;
-    }
-
-    .payment {
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, calc(100% + 5vw));
-        width: calc(100% - 32px);
-    }
-
     .content {
         padding: 124px 16px 70px;
     }
 
-    .content__slider {
-        margin-bottom: 70px;
-    }
-
-    .projects {
-        margin-bottom: 70px;
-    }
-
-    .projects__header {
-        margin-bottom: 27px;
-
-        text-align: center;
-    }
-
-    .contacts-us__header {
-        margin-bottom: 30px;
+    .technology__header {
+        margin-bottom: 15px;
 
         text-align: center;
     }
