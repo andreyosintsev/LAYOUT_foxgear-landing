@@ -7,9 +7,12 @@
 
     <link rel="stylesheet" href="css/common/normalize.css">
     <link rel="stylesheet" href="css/common/consts.css">
+    <link rel="stylesheet" href="../../css/common/owl.carousel.min.css" >
+    <link rel="stylesheet" href="../../css/common/owl.theme.default.min.css" >
     <link rel="stylesheet" href="blocks/logo/css/logo.css">
     <link rel="stylesheet" href="blocks/menu-mobile/css/menu-mobile.css">
     <link rel="stylesheet" href="blocks/header/css/header.css">
+    <link rel="stylesheet" href="blocks/hero-slider/css/hero-slider.css">
     <link rel="stylesheet" href="css/pages/index.css">
 </head>
 <body>
@@ -125,7 +128,66 @@
             </nav>
         </div>
     </header>
+    <main class="main">
+        <div class="wrapper">
+            <div class="hero-slider">
+                <!--div class="hero-slider__button hero-slider__button_prev"></!--div-->
+                <div class="hero-slider__cards owl-carousel owl-theme">
+                    <div class="hero-slider__card">
+                        <a class="hero-slider__link" href="#" title="FoxGear - кресла и аксессуары">
+                            <img class="hero-slider__image" src="../../images/hero-slider/slide1.webp" alt="FoxGear - кресла и аксессуары">
+                        </a>
+                    </div>
+                    <div class="hero-slider__card">
+                        <a class="hero-slider__link" href="#" title="FoxGear - кресла и аксессуары">
+                            <img class="hero-slider__image" src="../../images/hero-slider/slide2.webp" alt="FoxGear - кресла и аксессуары">
+                        </a>
+                    </div>
+                    <div class="hero-slider__card">
+                        <a class="hero-slider__link" href="#" title="FoxGear - кресла и аксессуары">
+                            <img class="hero-slider__image" src="../../images/hero-slider/slide3.webp" alt="FoxGear - кресла и аксессуары">
+                        </a>
+                    </div>
+                </div>
+                <!--div class="hero-slider__button hero-slider__button_next"></!--div-->
+            </div>
+        </div>
+    </main>
 
+    <script src="../../scripts/util/jquery-3.7.1.min.js"></script>
+    <script src="../../scripts/util/owl.carousel.min.js"></script>
     <script src="scripts/menu-mobile.js"></script>
+    <script>
+        $(document).ready(function(){
+            const $owl = $('.owl-carousel').owlCarousel(
+            {
+                items: 3,
+                margin: 50,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                nav: false,
+                dots: true,
+                animateIn: "fadeInLeft",
+                animateOut: "fadeOutLeft",
+                responsive: {
+                    0: { items: 1 },
+                    1200: { items: 3 }
+                },
+                center: true,
+                stagePadding: 80,
+                pullDrag: true,
+                autoWidth: true,
+                autoHeight: false,
+            });
+            $(".hero-slider__button_next").click(function() {
+                $owl.trigger("next.owl.carousel");
+            });
+
+            $(".hero-slider__button_prev").click(function() {
+                $owl.trigger("prev.owl.carousel");
+            });
+        });
+    </script>
 </body>
 </html>

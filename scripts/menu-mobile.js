@@ -11,13 +11,17 @@ document.addEventListener('DOMContentLoaded', () => {
         return console.warn('DOM: element ".menu-mobile-button" not found');
     }
 
+    const body = document.querySelector('body');
+
     menuMobileButton.addEventListener('click', () => {
         if (menuMobile.classList.contains('hidden')) {
             menuMobileButton.classList.add('menu-mobile-button_close');
             menuMobile.classList.remove('hidden');
+            body.style.overflow = 'hidden';
         } else {
             menuMobileButton.classList.remove('menu-mobile-button_close');
             menuMobile.classList.add('hidden');
+            body.style.overflow = 'auto';
         }
     })
 })
