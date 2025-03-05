@@ -13,7 +13,7 @@
     left: 0px;
 
     font-family: var(--text-family-main, sans-serif);
-    font-size: 16px;
+    font-size: 14px;
 
     background-color: var(--white, #FFFFFF);
 
@@ -31,7 +31,7 @@
 .menu-mobile__contacts {
     font-weight: 600;
 
-    line-height: 28px;
+    line-height: 20px;
 
     text-align: center;
 }
@@ -60,7 +60,7 @@
 }
 
 .menu-mobile__item {
-    margin-bottom: 18px;
+    margin-bottom: 12px;
 }
 
 .menu-mobile__item:last-of-type {

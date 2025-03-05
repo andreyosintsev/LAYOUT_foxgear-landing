@@ -9,12 +9,6 @@ body {
     display: none !important;
 }
 
-.hero-slider {
-    width: 100%;
-    max-width: 100%;
-    margin: 50px auto;
-}
-
 .content {
     width: 100%;
     max-width: 1170px;
@@ -22,34 +16,40 @@ body {
     padding: 124px 0 150px;
 }
 
-
 .wrapper {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 16px;
+    padding: 0;
+}
+
+.technology {
+    margin-bottom: 50px;
+    padding-top: 50px;
 }
 
 .technology__header {
     margin-bottom: 25px;
 }
 
-
-.projects__header {
-    margin-bottom: 35px;
-}
-
-.projects {
-    margin-bottom: 180px;
-}
-
-.contacts-us__header {
-    margin-bottom: 36px;
+.contacts {
+    margin-bottom: 50px;
+    padding-top: 50px;
 }
 
 @media (max-width: 1200px) {
     .content {
         padding: 124px 16px 70px;
+    }
+
+    .technology {
+        margin-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .contacts {
+        margin-bottom: 20px;
+        padding-top: 20px;
     }
 
     .technology__header {

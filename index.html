@@ -7,14 +7,15 @@
 
     <link rel="stylesheet" href="css/common/normalize.css">
     <link rel="stylesheet" href="css/common/consts.css">
-    <link rel="stylesheet" href="../../css/common/owl.carousel.min.css" >
-    <link rel="stylesheet" href="../../css/common/owl.theme.default.min.css" >
+    <link rel="stylesheet" href="css/common/owl.carousel.min.css" >
+    <link rel="stylesheet" href="css/common/owl.theme.default.min.css" >
     <link rel="stylesheet" href="blocks/logo/css/logo.css">
     <link rel="stylesheet" href="blocks/menu-mobile/css/menu-mobile.css">
     <link rel="stylesheet" href="blocks/header/css/header.css">
     <link rel="stylesheet" href="blocks/hero-slider/css/hero-slider.css">
     <link rel="stylesheet" href="blocks/section-title/css/section-title.css">
     <link rel="stylesheet" href="blocks/video/css/video.css">
+    <link rel="stylesheet" href="blocks/contacts/css/contacts.css">
     <link rel="stylesheet" href="css/pages/index.css">
 </head>
 <body>
@@ -136,17 +137,17 @@
             <div class="hero-slider__cards owl-carousel owl-theme">
                 <div class="hero-slider__card">
                     <a class="hero-slider__link" href="#" title="FoxGear - кресла и аксессуары">
-                        <img class="hero-slider__image" src="../../images/hero-slider/slide1.webp" alt="FoxGear - кресла и аксессуары">
+                        <img class="hero-slider__image" src="images/hero-slider/slide1.webp" alt="FoxGear - кресла и аксессуары">
                     </a>
                 </div>
                 <div class="hero-slider__card">
                     <a class="hero-slider__link" href="#" title="FoxGear - кресла и аксессуары">
-                        <img class="hero-slider__image" src="../../images/hero-slider/slide2.webp" alt="FoxGear - кресла и аксессуары">
+                        <img class="hero-slider__image" src="images/hero-slider/slide2.webp" alt="FoxGear - кресла и аксессуары">
                     </a>
                 </div>
                 <div class="hero-slider__card">
                     <a class="hero-slider__link" href="#" title="FoxGear - кресла и аксессуары">
-                        <img class="hero-slider__image" src="../../images/hero-slider/slide3.webp" alt="FoxGear - кресла и аксессуары">
+                        <img class="hero-slider__image" src="images/hero-slider/slide3.webp" alt="FoxGear - кресла и аксессуары">
                     </a>
                 </div>
             </div>
@@ -157,16 +158,51 @@
                 <h2 class="section-title technology__header">Teхнология кресел FoxGear</h2>
                 <div class="video">
                     <video class="video__player" controls autoplay playsinline muted loop>
-                        <source src="../../video/video.mp4" type="video/mp4">
+                        <source src="video/video.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео
                     </video>
+                </div>
+            </section>
+            <section class="contacts">
+                <div class="contacts__info">
+                    <h2 class="section-title contacts__header">Контакты</h2>
+                    <div class="contacts__address">
+                        <p class="contacts_p">Электронная почта: example@example.ru</p>
+                        <p class="contacts_p">Телефон: +7 (123) 456-7890</p>
+                    </div>
+                    <div class="contacts__afterword">
+                        Мы поможем вам подобрать идеальное кресло для вашего рабочего пространства.
+                    </div>
+                    <ul class="contats__socials">
+                        <li class="contacts__social contacts__social_telegram">
+                            <a class="contacts__social-link"
+                                href="#"
+                                title="Мы в Telegram">
+                            </a>
+                        </li>
+                        <li class="contacts__social contacts__social_instagram">
+                            <a class="contacts__social-link"
+                                href="#"
+                                title="Мы в Instagram*">
+                            </a>
+                        </li>
+                        <li class="contacts__social contacts__social_vk">
+                            <a class="contacts__social-link"
+                                href="#"
+                                title="Мы ВКонтакте">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contacts__map">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=mymaps%3AmtfhU9h9r-a8w_lkm3sE7-SGyp2FltTc&amp;width=100%25&amp;height=480&amp;lang=ru_RU&amp;scroll=true"></script>
                 </div>
             </section>
         </div>
     </main>
 
-    <script src="../../scripts/util/jquery-3.7.1.min.js"></script>
-    <script src="../../scripts/util/owl.carousel.min.js"></script>
+    <script src="scripts/util/jquery-3.7.1.min.js"></script>
+    <script src="scripts/util/owl.carousel.min.js"></script>
     <script src="scripts/menu-mobile.js"></script>
     <script>
         $(document).ready(function(){
