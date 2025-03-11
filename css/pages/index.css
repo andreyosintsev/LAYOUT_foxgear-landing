@@ -3,6 +3,8 @@ body {
     font-family: var(--text-family-main, sans-serif);
     font-weight: 300;
     font-size: 18px;
+
+    scrollbar-width: thin;
 }
 
 .hidden {
@@ -41,6 +43,10 @@ body {
   margin-bottom: 25px;
 }
 
+.compare__header {
+    margin-bottom: 25px;
+}
+
 .contacts {
     margin-bottom: 50px;
     padding-top: 50px;
@@ -72,6 +78,17 @@ body {
         margin-bottom: 15px;
 
         text-align: center;
+    }
+
+    .compare__header {
+        margin-bottom: 15px;
+
+        text-align: center;
+    }
+
+    .products-mini {
+        padding-left: 16px;
+        gap: 0;        
     }
 
     .contacts {
