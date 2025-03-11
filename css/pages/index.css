@@ -47,6 +47,10 @@ body {
     margin-bottom: 25px;
 }
 
+.compare__table {
+    max-height: 800px;
+}
+
 .contacts {
     margin-bottom: 50px;
     padding-top: 50px;
