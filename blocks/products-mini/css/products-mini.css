@@ -11,8 +11,9 @@
 
 .products-mini {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, auto);
     grid-template-rows: auto;
+    gap: 0 20px;
     justify-content: start;
     align-items: start;
     width: 100%;
@@ -26,30 +27,5 @@
 }
 
 .products-mini__card {
-    margin-right: 20px;
     margin-bottom: 30px;
 }
-
-/* @media (max-width: 1200px) {
-    .wrapper {
-        padding-right: 16px;
-        padding-left: 16px;
-    }
-}
-
-@media (max-width: 900px) {
-    .products__card {
-        width: 49%;
-        margin-bottom: 30px;
-    }
-}
-
-@media (max-width: 767px) {
-    .products__cards {
-      display: block;
-    }
-
-    .products__card {
-      width: 100%;
-    }
-} */
