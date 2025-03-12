@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="blocks/products-mini/css/products-mini.css">
     <link rel="stylesheet" href="blocks/products-compare/css/products-compare.css">
     <link rel="stylesheet" href="blocks/contacts/css/contacts.css">
-    <link rel="stylesheet" href="blocks/payment-popup/css/payment-popup.css">
+    <link rel="stylesheet" href="blocks/popup/css/popup.css">
     <link rel="stylesheet" href="blocks/footer/css/footer.css">
     <link rel="stylesheet" href="css/pages/index.css">
 </head>
@@ -416,7 +416,7 @@
                         <div class="card-product-mini__price">
                             24 990 р.
                         </div>
-                        <button class="button card-product-mini__button button_buy" data-product="FG-NETZ-M-BK">
+                        <button class="button card-product-mini__button button_buy" data-product="FG-NETZ-E-BK">
                             Купить
                         </button>
                     </div>
@@ -642,116 +642,66 @@
                 Мы поможем вам подобрать идеальное кресло для вашего рабочего пространства.
             </div>
         </div>
-        <div class="payment-popup__container hidden">
-            <!--Общая платёжная форма-->
-            <div class="payment-popup payment-popup_desktop">
-                <div class="menu-mobile__close"></div>
-                <div class="payment-popup__title">
-                    <span class="payment-popup__title payment-popup__title_strong">Вы можете нам помочь!</span> Даже небольшое пожертвование сможет поддержать проект
-                </div>
-                <form class="form payment-popup__form" name="payment-popup">
-                    <div class="form__recurrence">
-                        <label class="form__radio-item">
-                            <input class="form__radio"
-                                    type="radio"
-                                    id="checkbox_once"
-                                    name="recurrence"
-                                    checked>
-                            <span class="form__radio-item_custom"></span>
-                            <span class="form__label">Помочь разово</span>
-                        </label>
-                        <label class="form__radio-item">
-                            <input class="form__radio"
-                                    type="radio"
-                                    id="checkbox_monthly"
-                                    name="recurrence">
-                            <span class="form__radio-item_custom"></span>
-                            <span class="form__label">Помогать ежемесячно</span>
-                        </label>
-                    </div>
-                    <div class="form__text">
-                        <p class="form__text-p">
-                            Ваша поддержка очень важна для нашей организации и поможет нам продолжать нашу деятельность в помощи нуждающимся.
-                        </p>
-                    </div>
-                    <div class="form__subtitle">1. Сумма пожертвования</div>
-                    <div class="form__payment-popup-sums">
-                        <div class="button form__payment-popup-sum button_outlined">300 ₽</div>
-                        <div class="button form__payment-popup-sum button_outlined">500 ₽</div>
-                        <div class="button form__payment-popup-sum button_outlined">1000 ₽</div>
-                        <div class="button form__payment-popup-sum button_outlined">3000 ₽</div>
-                        <div class="input form__payment-popup-sum">
-                            <input
-                                class="form__input form__input_sum"
-                                type="number"
-                                inputmode="numeric"
-                                pattern="\d*"
-                                placeholder="Другая сумма">
+        <div class="popup hidden" id="popup-order">
+            <div class="loader hidden"></div>
+            <div class="popup__content">
+                <h2 class="h2 popup__heading">
+                    Оставьте заявку
+                </h2>
+                <p class="popup__product"></p>
+                <form class="form popup__form">
+                    <input class="form__input" name="name" placeholder="Ваше имя">
+                    <input class="form__input" name="tel" placeholder="Телефон">
+                    <input class="form__input" name="email" placeholder="E-mail">
+                    <input type="hidden" name="product">
+                    <div class="form__submit">
+                        <input class="button form__button" type="submit" value="Отправить">
+                        <div class="form__offer">
+                            Нажимая кнопку &ldquo;Отправить&rdquo;<br>
+                            вы соглашаетесь с <a class="form__link" href="#" title="Текст публичной оферты" target="_blank">публичной офертой</a>
                         </div>
                     </div>
-                    <div class="form__contact-method">
-                        <div class="form__contact">
-                            <div class="form__subtitle">2. Контактная информация</div>
-                            <input
-                                class="form__input form__input_name"
-                                type="text"
-                                placeholder="Ваше имя">
-                            <input
-                                class="form__input form__input_email"
-                                type="text"
-                                placeholder="Ваш e-mail (для чека)">
-                        </div>
-                        <div class="form__method">
-                            <div class="form__subtitle">3. Способ пожертвования</div>
-                            <div class="form__method-buttons">
-                                <div class="button form__payment-popup-method button_outlined">
-                                    <div class="form__payment-popup-method-image">
-                                        <img class="form__payment-popup-method-image-img form__payment-popup-method-image_card"
-                                            src="./images/card.png"
-                                            alt="Банковская карта">
-                                    </div>
-                                    <div class="form__payment-popup-method-label">
-                                        Банковская карта
-                                    </div>
-                                </div>
-                                <div class="button form__payment-popup-method button_outlined">
-                                    <div class="form__payment-popup-method-image">
-                                        <img class="form__payment-popup-method-image-img form__payment-popup-method-image_sbp"
-                                            src="./images/sbp.png"
-                                            alt="СБП платеж">
-                                    </div>
-                                    <div class="form__payment-popup-method-label">
-                                        СБП платеж
-                                    </div>
-                                </div>
-                                <div class="button form__payment-popup-method button_outlined">
-                                    <div class="form__payment-popup-method-image">
-                                        <img class="form__payment-popup-method-image-img form__payment-popup-method-image_yad"
-                                            src="./images/yad.png"
-                                            alt="Яндекс.Деньги">
-                                    </div>
-                                    <div class="form__payment-popup-method-label">
-                                        Яндекс.Деньги
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button
-                        class="button form__button"
-                        type="button">
-                        СДЕЛАТЬ ПОЖЕРТВОВАНИЕ<span class="button__heart"></span>
-                    </button>
                 </form>
-                <div class="form__close"></div>
-            </div>
+                <div class="popup__close"></div>
+            </div>    
         </div>
+        <div class="popup popup_success hidden" id="popup-success">
+            <h2 class="h2 popup__heading popup__heading_success">
+                Успешно отправлено
+            </h2>
+            <p class="popup__text">
+                Ваше запрос было успешно отправлен.
+            </p>
+            <p class="popup__text">
+                В ближайшее время наш менеджер свяжется с Вами и предоставит всю необходимую информацию.
+            </p>
+            <p class="popup__text">
+                Благодарим за обращение!
+            </p>
+            <div class="popup__close"></div> 
+        </div>
+        <div class="popup popup_failed hidden" id="popup-failed">
+            <h2 class="h2 popup__heading popup__heading_failed">
+                Сообщение не отправлено
+            </h2>
+            <p class="popup__text">
+                К сожалению, Ваш запрос отправить не удалось.
+            </p>
+            <p class="popup__text">
+                Но мы знаем о проблеме, и совсем скоро её устраним. Попробуйте ещё раз отправить обращение позже.
+            </p>
+            <p class="popup__text">
+                Просим прощения за доставленные неудобства.
+            </p>
+            <div class="popup__close"></div>
+        </div>
+        <div class="overlay hidden"></div>
     </footer>
 
     <script src="scripts/util/jquery-3.7.1.min.js"></script>
     <script src="scripts/util/owl.carousel.min.js"></script>
     <script src="scripts/menu-mobile.js"></script>
-    <script src="scripts/payment-popup.js"></script>
+    <script src="scripts/popup.js"></script>
     <script>
         $(document).ready(function(){
             const $owl = $('.owl-carousel').owlCarousel(
