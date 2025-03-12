@@ -25,6 +25,10 @@ body {
     padding: 0;
 }
 
+.block-image {
+    margin-bottom: 50px;
+}
+
 .technology {
     margin-bottom: 50px;
     padding-top: 50px;
