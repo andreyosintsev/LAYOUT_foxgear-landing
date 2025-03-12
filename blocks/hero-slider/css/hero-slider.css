@@ -8,11 +8,11 @@
     padding-top: 50px;
 }
 
-.owl-item {
+.hero-slider .owl-item {
     opacity: 0.3;
 }
 
-.owl-item.center {
+.hero-slider .owl-item.center {
     opacity: 1;
 }
 

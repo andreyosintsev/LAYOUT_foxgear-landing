@@ -1,4 +1,11 @@
 /*Montserrat Medium*/
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 300;
+    src: url("../../fonts/Montserrat-Light.otf") format("truetype");
+    font-display: swap;
+}
 @font-face {
     font-family: 'Montserrat';
     font-weight: 500;

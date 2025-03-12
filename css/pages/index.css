@@ -47,6 +47,11 @@ body {
   margin-bottom: 25px;
 }
 
+.compare {
+    margin-bottom: 50px;
+    padding-top: 50px;
+}
+
 .compare__header {
     margin-bottom: 25px;
 }
@@ -54,6 +59,11 @@ body {
 .compare__table {
     max-height: 800px;
 }
+
+.rewiews {
+    margin-bottom: 50px;
+    padding-top: 50px;
+  }
 
 .contacts {
     margin-bottom: 50px;
