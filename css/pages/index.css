@@ -34,26 +34,14 @@ body {
     padding-top: 50px;
 }
 
-.technology__header {
-    margin-bottom: 25px;
-}
-
 .products {
   margin-bottom: 50px;
   padding-top: 50px;
 }
 
-.products__header {
-  margin-bottom: 25px;
-}
-
 .compare {
     margin-bottom: 50px;
     padding-top: 50px;
-}
-
-.compare__header {
-    margin-bottom: 25px;
 }
 
 .compare__table {
@@ -81,27 +69,9 @@ body {
         padding-top: 20px;
     }
 
-    .technology__header {
-        margin-bottom: 15px;
-
-        text-align: center;
-    }
-
     .products {
         margin-bottom: 20px;
         padding-top: 20px;
-    }
-
-    .products__header {
-        margin-bottom: 15px;
-
-        text-align: center;
-    }
-
-    .compare__header {
-        margin-bottom: 15px;
-
-        text-align: center;
     }
 
     .products-mini {
