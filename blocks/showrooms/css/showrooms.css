@@ -1,0 +1,45 @@
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.showrooms__cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 50px;
+    padding-top: 50px;
+
+    flex-wrap: wrap;
+}
+
+.showrooms__card {
+    width: 32%;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 1200px) {
+    .wrapper {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
+
+@media (max-width: 900px) {
+    .showrooms__cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .showrooms__card {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1.37;
+        margin-bottom: 16px;
+    }
+}
