@@ -13,9 +13,11 @@
 }
 
 @media (max-width: 1200px) {
-    margin-bottom: 15px;
+    .section-title {
+        margin-bottom: 15px;
 
-    text-align: center;
+        text-align: center;
+    }
 }
 
 @media (max-width: 900px) {
