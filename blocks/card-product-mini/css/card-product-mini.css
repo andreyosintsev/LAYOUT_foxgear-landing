@@ -3,7 +3,7 @@
     width: 100%;
     max-width: 220px;
     min-width: 180px;
-    padding: 10px;
+    padding: 0;
 
     color: var(--text-color-main, #000000);
     font-family: var(--text-family-main, sans-serif);
@@ -50,7 +50,7 @@
 
 .card-product-mini__button {
     display: inline-block;
-    width: 100%;
+    width: calc(100% - 10px);
     margin-right: 10px;
     padding: 5px;
 
