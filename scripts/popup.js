@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     РАБОТА C POPUP
 */
     const buyButtons = document.querySelectorAll('.button_buy');
-    console.log(buyButtons);
 
     if (!popup) {
         return console.error('DOM: element ".popup" not found');

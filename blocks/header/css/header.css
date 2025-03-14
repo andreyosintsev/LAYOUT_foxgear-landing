@@ -152,7 +152,7 @@
         position: fixed;
         padding: 10px 16px;
 
-        z-index: 5;
+        z-index: 200;
     }
 
     .pre-header {
