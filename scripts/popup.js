@@ -14,7 +14,6 @@
 const placeholders = {};
 
 document.addEventListener('DOMContentLoaded', () => {
-
     const body = document.querySelector('body');
     const popup = document.querySelector('#popup-order');
     const popupSuccess = document.querySelector('#popup-success');
@@ -28,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     РАБОТА C POPUP
 */
     const buyButtons = document.querySelectorAll('.button_buy');
+    console.log(buyButtons);
 
     if (!popup) {
         return console.error('DOM: element ".popup" not found');

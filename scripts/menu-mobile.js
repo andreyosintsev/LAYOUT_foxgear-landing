@@ -15,13 +15,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     menuMobileButton.addEventListener('click', () => {
         if (menuMobile.classList.contains('hidden')) {
-            menuMobileButton.classList.add('menu-mobile-button_close');
-            menuMobile.classList.remove('hidden');
-            body.classList.add('noscroll');
+            showMenuMobile();
         } else {
-            menuMobileButton.classList.remove('menu-mobile-button_close');
-            menuMobile.classList.add('hidden');
-            body.classList.remove('noscroll');
+            hideMenuMobile();
         }
-    })
-})
+    });
+
+    menuLinks = menuMobile.querySelectorAll('.menu-mobile__link');
+
+    menuLinks.forEach(link => link.addEventListener('click', hideMenuMobile));
+
+    function showMenuMobile() {
+        menuMobileButton.classList.add('menu-mobile-button_close');
+        menuMobile.classList.remove('hidden');
+        body.classList.add('noscroll');
+    }
+
+    function hideMenuMobile() {
+        menuMobileButton.classList.remove('menu-mobile-button_close');
+        menuMobile.classList.add('hidden');
+        body.classList.remove('noscroll');
+    }
+
+});

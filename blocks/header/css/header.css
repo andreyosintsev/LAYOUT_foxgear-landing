@@ -149,7 +149,10 @@
 
 @media (max-width: 900px) {
     .header {
+        position: fixed;
         padding: 10px 16px;
+
+        z-index: 5;
     }
 
     .pre-header {

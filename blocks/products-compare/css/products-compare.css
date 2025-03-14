@@ -40,7 +40,6 @@
 }
 
 .products-compare__cell {
-    min-width: 200px;
     padding: 10px 10px;    
 }
 
@@ -48,6 +47,18 @@
     font-size: 18px;
 
     font-weight: 600;
+
+    text-align: center;
+}
+
+.products-compare__cell_product {
+    display: flex;
+    margin-bottom: 25px;
+    padding: 0;
+}
+
+.products-compare__product {
+    width: 147px;
 }
 
 .products-compare__props {
@@ -71,17 +82,5 @@
 
     .products-compare__cell_header {
         font-size: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .products-compare__cell {
-        width: 240px;  
-    }
-}
-
-@media (max-width: 360px) {
-    .products-compare__cell {
-        width: 340px;  
     }
 }

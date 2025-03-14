@@ -1,8 +1,6 @@
 .card-product-mini {
     display: block;
     width: 100%;
-    max-width: 220px;
-    min-width: 180px;
     padding: 0;
 
     color: var(--text-color-main, #000000);

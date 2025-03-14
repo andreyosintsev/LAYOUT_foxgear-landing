@@ -50,6 +50,8 @@ body {
 
 .compare__table {
     max-height: 800px;
+
+    overflow: auto;
 }
 
 .showrooms {
@@ -96,5 +98,11 @@ body {
     .contacts {
         margin-bottom: 20px;
         padding-top: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .main {
+        padding-top: 49px;
     }
 }

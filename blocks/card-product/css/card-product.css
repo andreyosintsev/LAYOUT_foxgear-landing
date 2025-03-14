@@ -4,7 +4,7 @@
     color: var(--text-color-main, #000000);
     font-family: var(--text-family-main, sans-serif);
     font-weight: 300;
-    font-size: 16px;
+    font-size: 14px;
 
     box-shadow: 0px 12px 14px -7px #0000001F;
 }
@@ -15,7 +15,7 @@
 }
 
 .card-product__content {
-    padding: 32px;
+    padding: 20px;
 
     background-color: var(--white, #FFFFFF);
 }

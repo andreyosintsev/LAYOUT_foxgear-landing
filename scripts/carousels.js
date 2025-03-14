@@ -44,25 +44,24 @@ $(document).ready(function(){
     function initCarousel() {
 
         if ($(window).width() < 767 && !carouselInitialized) {
-            console.log('Init!');
-        $cardsContainer.addClass('owl-carousel owl-theme').owlCarousel({
-            items: 1,
-            loop: true,
-            nav: false,
-            dots: true,
-            autoplay: true,
-            autoplayTimeout: 5000,
-            center: true,
-            pullDrag: true,
-        });
-        carouselInitialized = true;
+            $cardsContainer.addClass('owl-carousel owl-theme').owlCarousel({
+                items: 1,
+                loop: true,
+                nav: false,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                center: true,
+                pullDrag: true,
+            });
+            carouselInitialized = true;
         }
     }
 
     function destroyCarousel() {
         if ($(window).width() >=767 && carouselInitialized) {
-        $cardsContainer.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-theme');
-        carouselInitialized = false;
+            $cardsContainer.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-theme');
+            carouselInitialized = false;
         }
     }
 
