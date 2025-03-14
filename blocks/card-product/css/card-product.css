@@ -57,3 +57,15 @@
 .card-product__button:last-child {
     margin-right: 0;
 }
+
+@media (max-width: 900px) {
+    .card-product__title {
+        margin-bottom: 10px;
+    
+        font-size: 18px;
+    }
+
+    .card-product__description {
+       font-size: 14px;
+    }
+}

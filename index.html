@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="blocks/showrooms/css/showrooms.css">
     <link rel="stylesheet" href="blocks/reviews/css/reviews.css">
     <link rel="stylesheet" href="blocks/review/css/review.css">
+    <link rel="stylesheet" href="blocks/feedback/css/feedback.css">
     <link rel="stylesheet" href="blocks/contacts/css/contacts.css">
     <link rel="stylesheet" href="blocks/popup/css/popup.css">
     <link rel="stylesheet" href="blocks/footer/css/footer.css">
@@ -41,7 +42,7 @@
         </div>
         <ul class="menu-mobile__items">
             <li class="menu-mobile__item">
-                <a class="menu-mobile__link" href="#" title="Технология кресел FoxGear">Технология кресел FoxGear</a>
+                <a class="menu-mobile__link" href="#technology" title="Технология кресел FoxGear">Технология кресел FoxGear</a>
             </li>
             <li class="menu-mobile__item">
                 <a class="menu-mobile__link" href="#" title="Netz модель X">Netz модель X</a>
@@ -50,22 +51,22 @@
                 <a class="menu-mobile__link" href="#" title="Netz модель M">Netz модель M</a>
             </li>
             <li class="menu-mobile__item">
-                <a class="menu-mobile__link" href="#" title="Netz модель X">Netz модель M</a>
+                <a class="menu-mobile__link" href="#" title="Netz модель E">Netz модель E</a>
             </li>
             <li class="menu-mobile__item">
-                <a class="menu-mobile__link" href="#" title="Netz модель M">Netz модель E</a>
+                <a class="menu-mobile__link" href="#" title="Netz модель XO">Netz модель XO</a>
             </li>
             <li class="menu-mobile__item">
-                <a class="menu-mobile__link" href="#" title="Цены">Цены</a>
+                <a class="menu-mobile__link" href="#products" title="Цены">Цены</a>
             </li>
             <li class="menu-mobile__item">
-                <a class="menu-mobile__link" href="#" title="Сравнение кресел">Сравнение кресел</a>
+                <a class="menu-mobile__link" href="#compare" title="Сравнение кресел">Сравнение кресел</a>
             </li>
             <li class="menu-mobile__item">
-                <a class="menu-mobile__link" href="#" title="Шоурумы">Шоурумы</a>
+                <a class="menu-mobile__link" href="#showrooms" title="Шоурумы">Шоурумы</a>
             </li>
             <li class="menu-mobile__item">
-                <a class="menu-mobile__link" href="#" title="Контакты">Контакты</a>
+                <a class="menu-mobile__link" href="#contacts" title="Контакты">Контакты</a>
             </li>
         </ul>
         <div class="menu-mobile__contacts">
@@ -102,7 +103,7 @@
             <nav class="menu-main">
                 <ul class="menu-main__items">
                     <li class="menu-main__item">
-                        <a class="menu-main__link" href="#" title="Технология кресел FoxGear">
+                        <a class="menu-main__link" href="#technology" title="Технология кресел FoxGear">
                             Технология кресел FoxGear
                         </a>
                     </li>
@@ -122,22 +123,27 @@
                         </a>
                     </li>
                     <li class="menu-main__item">
-                        <a class="menu-main__link" href="#" title="Цены">
+                        <a class="menu-main__link" href="#" title="Netz модель XO">
+                            Netz модель XO
+                        </a>
+                    </li>
+                    <li class="menu-main__item">
+                        <a class="menu-main__link" href="#products" title="Цены">
                             Цены
                         </a>
                     </li>
                     <li class="menu-main__item">
-                        <a class="menu-main__link" href="#" title="Сравнение кресел">
+                        <a class="menu-main__link" href="#compare" title="Сравнение кресел">
                             Сравнение кресел
                         </a>
                     </li>
                     <li class="menu-main__item">
-                        <a class="menu-main__link" href="#" title="Шоурумы">
+                        <a class="menu-main__link" href="#showrooms" title="Шоурумы">
                             Шоурумы
                         </a>
                     </li>
                     <li class="menu-main__item">
-                        <a class="menu-main__link" href="#" title="Контакты">
+                        <a class="menu-main__link" href="#contacts" title="Контакты">
                             Контакты
                         </a>
                     </li>
@@ -168,7 +174,7 @@
             <!--div class="hero-slider__button hero-slider__button_next"></!--div-->
         </div>
         <div class="wrapper">
-            <section class="technology">
+            <section class="technology" id="technology">
                 <h2 class="section-title technology__header">Teхнология кресел FoxGear</h2>
                 <p class="post__p">
                     Регулировка поддержки спины и поясницы позволяет адаптировать поддержку точно по конурам вашего тела для комфортной и удобной позы.
@@ -196,7 +202,7 @@
             </picture>
         </div>
         <div class="wrapper">
-            <section class="products">
+            <section class="products" id="products">
                 <h2 class="section-title products__header">Цены на кресла FoxGear</h2>
                 <div class="products__cards">  
                     <div class="card-product products__card">
@@ -372,7 +378,7 @@
             </picture>
         </div>
         <div class="wrapper">
-            <section class="compare">
+            <section class="compare" id="compare">
                 <h2 class="section-title compare__header">Сравнение кресел</h2>
                 <div class="products-mini compare__products">
                     <div class="card-product-mini products-mini__card">
@@ -561,7 +567,7 @@
                     </div>  
                 </div>
             </section>
-            <section class="showrooms">
+            <section class="showrooms" id="showrooms">
                 <h2 class="section-title showrooms__title">Шоурумы</h2>
                 <div class="showrooms__cards">
                     <div class="card-showroom showrooms__card">
@@ -711,7 +717,33 @@
             </div>
         </section>
         <div class="wrapper">
-            <section class="contacts">
+            <div class="feedback" id="feedback">
+                <div class="feedback__wrapper">
+                    <div class="loader hidden"></div>
+                    <h2 class="h2 feedback__heading">
+                        Хотите обновить рабочее место?
+                    </h2>
+                    <p class="feedback__text">
+                        Посмотрите наши модели кресел, узнайте больше на сайте или свяжитесь с нами, если у вас есть вопросы.
+                    </p>
+                    <form class="form feedback__form">
+                        <input class="feedback__input feedback__input_name" 
+                                name="name" 
+                                placeholder="Ваше имя">
+                        <input class="feedback__input feedback__input_email"
+                                name="email"
+                                placeholder="E-mail">
+                        <textarea class="feedback__textarea" 
+                                name="message"
+                                placeholder="Какой у вас вопрос?"></textarea>
+                        <div class="feedback__result hidden">Ваше сообщение успешно отправлено</div>
+                        <div class="feedback__submit">
+                            <input class="button feedback__button" type="submit" value="Отправить">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <section class="contacts" id="contacts">
                 <div class="contacts__info">
                     <h2 class="section-title contacts__header">Контакты</h2>
                     <div class="contacts__address">
@@ -753,7 +785,11 @@
             <div class="footer__menu">
                 <div class="footer__menu-column">
                     <div class="footer__menu-title">
-                        Технология кресел FoxGear
+                        <a class="footer__menu-link"
+                            href="#technology"
+                            title="Технология кресел FoxGear">
+                            Технология кресел FoxGear
+                        </a>
                     </div>
                     <div class="footer__menu-item">
                         <a class="footer__menu-link"
@@ -772,8 +808,15 @@
                     <div class="footer__menu-item">
                         <a class="footer__menu-link"
                             href="#"
-                            title="Смотреть кресло Netz модель Z">
-                            Netz модель Z
+                            title="Смотреть кресло Netz модель E">
+                            Netz модель E
+                        </a>
+                    </div>
+                    <div class="footer__menu-item">
+                        <a class="footer__menu-link"
+                            href="#"
+                            title="Смотреть кресло Netz модель XO">
+                            Netz модель XO
                         </a>
                     </div>
                 </div>
@@ -783,21 +826,21 @@
                     </div>
                     <div class="footer__menu-item">
                         <a class="footer__menu-link"
-                            href="#"
+                            href="#products"
                             title="Смотреть цены на кресла FoxGear">
                             Цены
                         </a>
                     </div>
                     <div class="footer__menu-item">
                         <a class="footer__menu-link"
-                            href="#"
+                            href="#compare"
                             title="Смотреть сравнение кресел FoxGear">
                             Сравнение кресел
                         </a>
                     </div>
                     <div class="footer__menu-item">
                         <a class="footer__menu-link"
-                            href="#"
+                            href="#showrooms"
                             title="Где купить кресла FoxGear">
                             Шоурумы
                         </a>
@@ -887,6 +930,7 @@
     <script src="scripts/util/owl.carousel.min.js"></script>
     <script src="scripts/menu-mobile.js"></script>
     <script src="scripts/popup.js"></script>
+    <script src="scripts/feedback.js"></script>
     <script src="scripts/carousels.js"></script>
 </body>
 </html>

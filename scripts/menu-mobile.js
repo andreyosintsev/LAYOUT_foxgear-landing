@@ -17,11 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (menuMobile.classList.contains('hidden')) {
             menuMobileButton.classList.add('menu-mobile-button_close');
             menuMobile.classList.remove('hidden');
-            body.style.overflow = 'hidden';
+            body.classList.add('noscroll');
         } else {
             menuMobileButton.classList.remove('menu-mobile-button_close');
             menuMobile.classList.add('hidden');
-            body.style.overflow = 'auto';
+            body.classList.remove('noscroll');
         }
     })
 })

@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--text-color-main, #000000);
     font-family: var(--text-family-main, sans-serif);
@@ -46,6 +50,11 @@ body {
 
 .compare__table {
     max-height: 800px;
+}
+
+.showrooms {
+    margin-bottom: 50px;
+    padding-top: 50px;
 }
 
 .reviews {

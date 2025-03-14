@@ -51,3 +51,10 @@
     font-weight: 700;
 }
 
+@media (max-width: 900px) {
+    .review {
+        font-size: 14px;
+
+        line-height: 21px;
+    }
+}

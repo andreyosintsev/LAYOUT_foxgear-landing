@@ -146,7 +146,7 @@
 
 
     .post__p {
-        padding: 0 16px 20px;
+        padding: 0 0 20px;
     }
 
     .post__blockquote {
@@ -185,5 +185,13 @@
     .post__donate-info-string {
         font-size: 15px;
         line-height: 18px;
+    }
+}
+
+@media (max-width: 900px) {
+    .post__p {
+        font-size: 14px;
+
+        line-height: 20px;
     }
 }

@@ -57,9 +57,19 @@
     }
 }
 
+@media (max-width: 900px) {
+    .contacts {
+        font-size: 16px;
+    }
+}
+
 @media (max-width: 800px) {
     .contacts {
         display: block;
+    }
+
+    .contacts__header {
+        margin-bottom: 30px;
     }
 
     .contacts__info {
