@@ -7,21 +7,21 @@
     font-size: 40px;
     font-weight: 700;
 
-    line-height: 70px;
+    line-height: 50px;
 
-    margin-bottom: 25px;
+    margin-bottom: 40px;
 }
 
 @media (max-width: 1200px) {
     .section-title {
-        margin-bottom: 15px;
-
         text-align: center;
     }
 }
 
 @media (max-width: 900px) {
     .section-title {
+        margin-bottom: 30px;
+
         font-size: 25px;
         line-height: 30px;
     }

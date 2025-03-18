@@ -29,23 +29,18 @@ body {
     padding: 0;
 }
 
-.block-image {
-    margin-bottom: 50px;
-}
-
 .technology {
-    margin-bottom: 50px;
-    padding-top: 50px;
+    padding-top: 90px;
+    margin-bottom: 90px;
 }
 
 .products {
-  margin-bottom: 50px;
-  padding-top: 50px;
+    padding-top: 90px;
+    margin-bottom: 90px;
 }
 
 .compare {
-    margin-bottom: 50px;
-    padding-top: 50px;
+    padding-top: 90px;
 }
 
 .compare__table {
@@ -55,19 +50,20 @@ body {
 }
 
 .showrooms {
-    margin-bottom: 50px;
-    padding-top: 50px;
+    padding-top: 90px;
 }
 
 .reviews {
-    margin-bottom: 50px;
-    padding-top: 50px;
-  }
+    padding-top: 90px;
+}
+
+.feedback {
+    padding-top: 90px;
+}
 
 .contacts {
-    margin-bottom: 50px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 90px;
+    margin-bottom: 90px;
 }
 
 @media (max-width: 1200px) {
@@ -80,24 +76,9 @@ body {
         padding-right: 16px;
     }
 
-    .technology {
-        margin-bottom: 20px;
-        padding-top: 20px;
-    }
-
-    .products {
-        margin-bottom: 20px;
-        padding-top: 20px;
-    }
-
     .products-mini {
         padding-left: 16px;
         gap: 0;        
-    }
-
-    .contacts {
-        margin-bottom: 20px;
-        padding-top: 20px;
     }
 }
 

@@ -1,6 +1,5 @@
 .feedback {
     width: 100%;
-    padding: 100px 0;
 
     color: var(--text-color-main, #000000);
     font-family: var(--text-family-main, sans-serif);
