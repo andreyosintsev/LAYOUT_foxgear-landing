@@ -28,23 +28,6 @@
     margin-right: 2%;
 }
 
-/* .hero-single__photos {
-    grid-area: photos;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-
-    flex-wrap: wrap;
-}
-
-.hero-single__photo {
-    width: 25%;
-    height: auto;
-    aspect-ratio: 1/1;
-
-    overflow: hidden;
-} */
-
 .hero-single__photo_active {
     outline: 1px solid var(--gray, #A6A6A6);
     outline-offset: -1px
@@ -127,12 +110,32 @@
         display: block;
     }
 
+    .hero-single__title {
+        margin-top: 50px;
+        margin-bottom: 20px;
+
+        font-size: 22px;
+    }
+
+    .hero-single__price {
+        font-size: 22px;
+    }
+
+    .hero-single__model {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
     .hero-single__image {
         margin-right: 0;
     }
 
     .hero-single__content {
         padding-left: 0;
+    }
+
+    .hero-single__benefit {
+        margin-bottom: 20px;
     }
 }
 
