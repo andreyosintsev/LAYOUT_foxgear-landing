@@ -40,6 +40,10 @@
     background-color: var(--gray-lighter, #E0E0E0);
 }
 
+a.button {
+    text-decoration: none;
+}
+
 @media (max-width: 800px) {
     .button {
         padding: 8px 10px;
