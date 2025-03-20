@@ -21,5 +21,19 @@
 }
 
 .block-image__image_blank {
-    height: 0;
+    display: block;
+}
+
+.block-image__image_blank-larger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .block-image__image_blank {
+        display: none;
+    }
+
+    .block-image__image_blank-larger {
+        display: block;
+    }
 }
