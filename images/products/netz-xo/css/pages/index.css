@@ -1,0 +1,89 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--text-color-main, #000000);
+    font-family: var(--text-family-main, sans-serif);
+    font-weight: 300;
+    font-size: 18px;
+
+    scrollbar-width: thin;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.content {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 124px 0 150px;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.technology {
+    padding-top: 90px;
+    margin-bottom: 90px;
+}
+
+.products {
+    padding-top: 90px;
+    margin-bottom: 90px;
+}
+
+.compare {
+    padding-top: 90px;
+}
+
+.compare__table {
+    max-height: 800px;
+
+    overflow: auto;
+}
+
+.showrooms {
+    padding-top: 90px;
+}
+
+.reviews {
+    padding-top: 90px;
+}
+
+.feedback {
+    padding-top: 90px;
+}
+
+.contacts {
+    padding-top: 90px;
+    margin-bottom: 90px;
+}
+
+@media (max-width: 1200px) {
+    .content {
+        padding: 124px 16px 70px;
+    }
+
+    .wrapper {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .products-mini {
+        padding-left: 16px;
+        gap: 0;        
+    }
+}
+
+@media (max-width: 900px) {
+    .main {
+        padding-top: 49px;
+    }
+}

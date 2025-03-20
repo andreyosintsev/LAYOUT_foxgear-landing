@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews Block</title>
+    <link rel="stylesheet" href="../../css/common/normalize.css">
+    <link rel="stylesheet" href="../../css/common/consts.css">
+    <link rel="stylesheet" href="../../css/common/owl.carousel.min.css" >
+    <link rel="stylesheet" href="../../css/common/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../section-title/css/section-title.css">
+    <link rel="stylesheet" href="../review/css/review.css">
+    <link rel="stylesheet" href="css/reviews.css">
+</head>
+<body style="background-color: yellowgreen; padding: 10px;">
+    <section class="reviews">
+        <div class="reviews__wrapper">
+            <h2 class="section-title reviews__title">Отзывы покупателей</h2>
+            <div class="reviews__reviews owl-carousel owl-theme">
+                <div class="review reviews__review">
+                    <div class="review__rating">
+                      <span class="review__star"></span>
+                      <span class="review__star"></span>  
+                      <span class="review__star"></span>  
+                      <span class="review__star"></span>  
+                      <span class="review__star review__star_blank"></span>  
+                    </div>
+                    <div class="review__product">
+                        Офисное кресло FoxGear Netz модель X
+                    </div>
+                    <div class="review__content">
+                        Хочу выразить огромную благодарность производителю за это замечательное компьютерное кресло! Это просто находка для тех, кто проводит за рабочим столом много времени. Кресло невероятно удобное и эргономичное: спинка идеально поддерживает поясницу, а регулируемая высота и наклон сиденья позволяют настроить его под свои предпочтения. Мягкая, но упругая подушка сиденья не даёт уставать даже после долгих часов работы
+                    </div>
+                    <div class="review__author">
+                        Михаил И.
+                    </div>
+                </div>
+                <div class="review reviews__review">
+                    <div class="review__rating">
+                      <span class="review__star"></span>
+                      <span class="review__star"></span>  
+                      <span class="review__star"></span>  
+                      <span class="review__star"></span>  
+                      <span class="review__star review__star_blank"></span>  
+                    </div>
+                    <div class="review__product">
+                        Офисное кресло FoxGear Netz модель X
+                    </div>
+                    <div class="review__content">
+                        Хочу выразить огромную благодарность производителю за это замечательное компьютерное кресло! Это просто находка для тех, кто проводит за рабочим столом много времени. Кресло невероятно удобное и эргономичное: спинка идеально поддерживает поясницу, а регулируемая высота и наклон сиденья позволяют настроить его под свои предпочтения. Мягкая, но упругая подушка сиденья не даёт уставать даже после долгих часов работы
+                    </div>
+                    <div class="review__author">
+                        Михаил И.
+                    </div>
+                </div>
+                <div class="review reviews__review">
+                    <div class="review__rating">
+                      <span class="review__star"></span>
+                      <span class="review__star"></span>  
+                      <span class="review__star"></span>  
+                      <span class="review__star"></span>  
+                      <span class="review__star review__star_blank"></span>  
+                    </div>
+                    <div class="review__product">
+                        Офисное кресло FoxGear Netz модель X
+                    </div>
+                    <div class="review__content">
+                        Хочу выразить огромную благодарность производителю за это замечательное компьютерное кресло! Это просто находка для тех, кто проводит за рабочим столом много времени. Кресло невероятно удобное и эргономичное: спинка идеально поддерживает поясницу, а регулируемая высота и наклон сиденья позволяют настроить его под свои предпочтения. Мягкая, но упругая подушка сиденья не даёт уставать даже после долгих часов работы
+                    </div>
+                    <div class="review__author">
+                        Михаил И.
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+
+    <script src="../../scripts/util/jquery-3.7.1.min.js"></script>
+    <script src="../../scripts/util/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.reviews__reviews').owlCarousel(
+            {
+                items: 2,
+                margin: 20,
+                loop: true,
+                autoplay: false,
+                autoplayTimeout: 5000,
+                nav: false,
+                dots: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    1200: {
+                        items: 2
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

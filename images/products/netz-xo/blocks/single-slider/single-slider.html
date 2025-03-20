@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Slider Block</title>
+    <link rel="stylesheet" href="../../css/common/normalize.css">
+    <link rel="stylesheet" href="../../css/common/consts.css">
+    <link rel="stylesheet" href="../../css/common/owl.carousel.min.css" >
+    <link rel="stylesheet" href="../../css/common/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../card-single/css/card-single.css">
+    <link rel="stylesheet" href="css/single-slider.css">
+</head>
+<body style="background-color: yellowgreen; padding: 10px;">
+    <div class="wrapper">
+        <div class="single-slider">
+            <div class="single-slider__cards owl-carousel owl-theme">
+                <div class="card-single">
+                    <img class="card-single__image"
+                        src="images/slider/ge-netz-x-01.webp"
+                        alt="Гидравлический лифт">
+                    <div class="card-single__content">
+                        <div class="card-single__title">
+                            Гидравлический лифт KGS класса 4 пр-во Корея
+                        </div>
+                        <div class="card-single__description">
+                            Кресло оснащено газлифтом BIFMA класса 4, имеющим сертификацию SGS и EN1335, обеспечивающим долговечность и надёжность
+                        </div>
+                    </div>
+                </div>
+                <div class="card-single">
+                    <img class="card-single__image"
+                        src="images/slider/ge-netz-x-02.webp"
+                        alt="Формованная подушка">
+                    <div class="card-single__content">
+                        <div class="card-single__title">
+                            Формованная подушка с обивкой из хлопка A709
+                        </div>
+                        <div class="card-single__description">
+                            Высокая степень поддержки, уменьшает давление на таз, увеличивает комфорт при сидении.<br>
+                            Соответствует требованиям к эргономике, способствует поддержанию правильной позы.
+                        </div>
+                    </div>
+                </div>
+                <div class="card-single">
+                    <img class="card-single__image"
+                        src="images/slider/ge-netz-x-03.jpg"
+                        alt="Сетчатая структура">
+                    <div class="card-single__content">
+                        <div class="card-single__title">
+                            Сетчатая структура: дышащая и стильная
+                        </div>
+                        <div class="card-single__description">
+                            Обеспечивает проветривание и комфорт благодаря сетчатой конструкции. Увеличивая поток воздуха, материал обеспечивает оптимальную вентиляцию, давая свежесть и комфортное сидение в течение всего дня.
+                        </div>
+                    </div>
+                </div>
+                <div class="card-single">
+                    <img class="card-single__image"
+                        src="images/slider/ge-netz-x-04.webp"
+                        alt="Кресло FoxGear Netz модель X">
+                    <div class="card-single__content">
+                        <div class="card-single__title">
+                            Пятилучевое основание - звездочка из алюминиевого сплава 350 и бесшумные полиуретановые ролики для защиты пола
+                        </div>
+                        <div class="card-single__description">
+                            Обеспечивает максимальную устойивость, защиту от коррозии, простоту сборки, а также надёжность и удобство.<br>
+                            Полиуретановые ролики идеальны для деревянного пола, плитки и коврового покрытия, обеспечивают амортизацию, шумопоглощение и увеличенный срок службы.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../scripts/util/jquery-3.7.1.min.js"></script>
+    <script src="../../scripts/util/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            const $owl = $('.owl-carousel').owlCarousel(
+            {
+                items: 3,
+                margin: 16,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                nav: false,
+                dots: true,
+                animateIn: "fadeInLeft",
+                animateOut: "fadeOutLeft",
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 },
+                    1024: { items: 3 }
+                },
+                pullDrag: true
+            });
+        });
+    </script>
+</body>
+</html>

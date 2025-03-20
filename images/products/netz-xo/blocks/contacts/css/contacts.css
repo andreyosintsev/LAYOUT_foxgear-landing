@@ -1,0 +1,77 @@
+.contacts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0;
+
+    font-family: var(--text-family-main, sans-serif);
+}
+
+.contacts__info {
+    margin-right: 20px;
+}
+
+.contats__socials {
+    display: flex;
+    margin-top: 40px;
+    padding: 0;
+
+    list-style: none;
+}
+
+.contacts__social {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contacts__social:last-child {
+    margin-right: 0;
+}
+
+.contacts__social_telegram {
+    background-image: url("../images/telegram.png");
+}
+
+.contacts__social_instagram {
+    background-image: url("../images/instagram.png");
+}
+.contacts__social_vk {
+    background-image: url("../images/vk.png");
+}
+
+.contacts__map {
+    margin-left: 20px;
+}
+
+@media (max-width: 900px) {
+    .contacts {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 800px) {
+    .contacts {
+        display: block;
+
+        font-size: 14px;
+    }
+
+    .contacts__header {
+        margin-bottom: 30px;
+    }
+
+    .contacts__info {
+        margin-right: 0;
+    }
+
+    .contacts__map {
+        margin-left: 0;
+    }
+}

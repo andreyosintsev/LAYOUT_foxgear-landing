@@ -1,0 +1,141 @@
+/*
+    ПРОЕКТ "FOXGEAR LANDING"
+    ШРИФТОВЫЕ И ЦВЕТОВЫЕ КОНСТАНТЫ
+
+    Последняя версия: 03.03.2025
+
+    UPD: начальная версия
+*/
+
+@import url("./fonts.css");
+
+:root {
+
+/*
+    Размеры экрана
+*/
+
+    --max-content-width:        1920px;
+    --wrapper-width:            1200px;
+
+/*
+    Основная палитра
+*/
+    --black:                    #000000; /* main text */
+    --off-black:                #101010; /* sum to collect */
+    --black-dark:               #151515; /* quotes text, pagination*/
+    --black-light:              #3C3C3C; /* menu items */
+    --gray-darker:              #868686; /* form placeholder */
+    --gray-dark:                #8A8A8A; /* current page */
+    --gray:                     #A6A6A6; /* to collect */
+    --gray-light:               #DCDCDC; /* outline buttons border*/
+    --gray-lighter:             #E0E0E0; /* utility buttons */
+    --back-white:               #F7F9F8; /* pages background */
+    --off-white:                #FBFBFB; /* payment background */
+    --white:                    #FFFFFF;
+
+
+    --green:                    #37CDAF; /* buttons, progress, sum collected */
+    --green-light:              #DBF6F1; /* progress-background */
+
+    --green-blue:               #E5F6F5; /* quotes and form background */
+    --green-blue-light:         #F9FDFD;
+
+
+
+    --red-light:                #FF6666; /* form error (idea)*/
+
+    /*
+    Шрифты
+*/
+
+    --text-family-main:         Montserrat, arial, sans-serif;
+    --text-family-featured:     Roboto, arial, sans-serif;
+
+
+    --text-color-main:         var(--black);
+    --text-color-menu:         var(--black-light)
+
+/*
+    Линейка прогресса
+*/
+
+    --progress-color:          var(--green);
+    --progress-background:     var(--green-light);
+
+/*
+    Рамки
+*/
+
+    --border-radius-xxsmall:    6px;  /* check boxes */
+    --border-radius-xsmall:     12px; /* mobile buttn */
+    --border-radius-smaller:    14px; /* payment methods */
+    --border-radius-small:      15px; /* featured images */
+    --border-radius:            20px; /* form inputs, panels */
+    --border-radius-large:      30px; /* cards */
+    --border-radius-xlarge:     35px; /* popups */
+
+/*
+    Меню
+*/
+    --menu-item:                var(--text-second);
+    --menu-item-color:          var(--text-color-menu);
+    --menu-item-current:        var(--green);
+
+/*
+    Ссылки
+*/
+    /* --link-normal-color:             var(--blue);
+    --link-normal-color_hover:          var(--blue-light);
+    --link-normal-color_disabled:       var(--gray);
+
+    --link-black-color:                 var(--black);
+    --link-black-color_hover:           var(--blue);
+    --link-black-color_disabled:        var(--gray);
+
+    --link-gray-color:                  var(--gray-dark);
+    --link-gray-color_hover:            var(--gray-darklight);
+    --link-gray-color_disabled:         var(--gray); */
+
+/*
+    Кнопки
+*/
+
+    /* --button-normal-background:         var(--green);
+    --button-normal-color:              var(--white);
+    --button-normal-background_hover:   var(--green-light);
+
+    --button-inversed-background:        transparent;
+    --button-inversed-color:             var(--green);
+    --button-inversed-color_hover:       var(--white);
+    --button-inversed-background_hover:  var(--green);
+
+    --button-outlined-background:       var(--white);
+    --button-outlined-color:            var(--black);
+    --button-outlined-border:           var(--gray-light);
+    --button-outlined-background_hover: var(--gray-lighter); */
+
+    /* --button-normal-background:         var(--blue);
+    --button-normal-color:              var(--white);
+    --button-normal-border:             var(--blue);
+
+    --button-normal-background_hover:   var(--blue-light);
+    --button-normal-color_hover:        var(--white);
+    --button-normal-border_hover:       var(--blue-light);
+
+    --button-normal-background_disabled:var(--gray-light);
+    --button-normal-color_disabled:     var(--gray);
+    --button-normal-border_disabled:    var(--gray-light);
+
+    --button-outlined-background:       var(--white);
+    --button-outlined-color:            var(--blue);
+    --button-outlined-border:           var(--blue);
+
+    --button-outlined-background_hover: var(--white);
+    --button-outlined-color_hover:      var(--blue-light);
+    --button-outlined-border_hover:     var(--blue-light);
+
+    --button-outlined-background_disabled: var(--white);
+    --button-outlined-color_disabled:      var(--gray);
+    --button-outlined-border_disabled:     var(--gray); */
+}
