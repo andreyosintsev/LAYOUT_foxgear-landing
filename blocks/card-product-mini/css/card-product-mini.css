@@ -5,8 +5,10 @@
 
     color: var(--text-color-main, #000000);
     font-family: var(--text-family-main, sans-serif);
-    font-weight: 300;
-    font-size: 14px;
+    font-weight: var(--text-weight-main, 300);
+    font-size: var(--text-size-small, 14px);
+
+    line-height: var(--text-line-height-small, 18px);
 
     background-color: var(--white, #FFFFFF);
 
@@ -25,15 +27,13 @@
 .card-product-mini__title {
     margin-bottom: 10px;
 
-    font-weight: 700;
-
+    font-weight: var(--text-weight-bold, 600);
 }
 
 .card-product-mini__price {
     margin-bottom: 20px;
 
-    font-size: 12px;
-    font-weight: 500;
+    font-weight: var(--text-weight-strong, 400);
 }
 
 .card-product-mini__price-old {
@@ -41,7 +41,7 @@
 
     color: var(--black-light, #3C3C3C);
     font-size: 10px;
-    font-weight: 300;
+    font-weight: var(--text-weight-main, 300);
 
     text-decoration: line-through;
 }
@@ -53,11 +53,10 @@
     padding: 5px;
 
     font-size: 12px;
-    font-weight: 700;
 
     text-transform: uppercase;
 
-    border-radius: 0;
+    border-radius: var(--border-radius-button_mini, 4px);
 }
 
 .card-product-mini__button:last-child {

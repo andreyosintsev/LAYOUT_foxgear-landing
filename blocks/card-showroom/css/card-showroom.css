@@ -6,7 +6,7 @@
 
     color: var(--white, #FFFFFF);
     font-family: var(--text-family-main, sans-serif);
-    font-size: 14px;
+    font-size: var(--text-size-smaller, 16px);
     font-weight: 300;
 
     background-color: var(--black, #000000);

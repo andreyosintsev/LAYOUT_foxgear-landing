@@ -7,8 +7,10 @@
 
     color: var(--text-color-main, #000000);
     font-family: var(--text-family-main, sans-serif);
-    font-weight: 300;
-    font-size: 16px;
+    font-weight: var(--text-weight-main, 300);
+    font-size: var(--text-size-small, 14px);
+
+    line-height: var(--text-line-height-small, 18px);
 
     background-color: var(--white, #FFFFFF);
 }
@@ -29,9 +31,17 @@
     grid-area: title;
     padding-top: 6px;
 
-    font-weight: 600;
+    font-weight: var(--text-weight-bold, 600);
 }
 
 .benefit__description {
     grid-area: description;
+}
+
+@media (max-width: 480px) {
+    .benefit {
+        font-size: var(--text-size-main_mobile, 14px);
+
+        line-height: var(--text-line-height-main_mobile, 16px);
+    }   
 }

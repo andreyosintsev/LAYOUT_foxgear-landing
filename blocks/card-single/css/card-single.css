@@ -3,8 +3,10 @@
 
     color: var(--text-color-main, #000000);
     font-family: var(--text-family-main, sans-serif);
-    font-weight: 300;
-    font-size: 14px;
+    font-size: var(--text-size-main, 16px);
+    font-weight: var(--text-weight-main, 300);
+
+    line-height: var(--text-line-height-main, 20px);
 }
 
 .card-single__image {
@@ -20,7 +22,8 @@
 .card-single__title {
     margin-bottom: 20px;
 
-    font-size: 18px;
+    font-size: var(--text-size-large, 18px);
+    font-weight: var(--text-weight-bold, 600);
 
     text-align: center;
 }
@@ -28,13 +31,13 @@
 .card-single__description {
     margin-bottom: 20px;
 
-    line-height: 20px;
+    line-height: var(--text-line-height-main, 20px);
 }
 
 @media (max-width: 900px) {
     .card-single__title {
         margin-bottom: 10px;
-    
-        font-size: 16px;
+
+        font-size: var(--text-size-large_mobile, 16px);
     }
 }

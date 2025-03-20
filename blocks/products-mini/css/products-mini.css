@@ -6,10 +6,6 @@
 }
 
 .products-mini {
-    overflow: auto;
-}
-
-.products-mini {
     display: grid;
     grid-template-columns: repeat(6, auto);
     grid-template-rows: auto;
@@ -24,6 +20,8 @@
     font-family: var(--text-family-main, sans-serif);
     font-weight: 300;
     font-size: 16px;
+
+    overflow: auto;
 }
 
 .products-mini__card {

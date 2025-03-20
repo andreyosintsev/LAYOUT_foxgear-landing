@@ -3,17 +3,22 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: var(--wrapper-width, 1200px);
     padding: 0;
 
+    color: var(--text-color-main, #000000);
     font-family: var(--text-family-main, sans-serif);
+    font-size: var(--text-size-main, 16px);
+    font-weight: var(--text-weight-main, 300);
+
+    line-height: var(--text-line-height-main, 20px);
 }
 
 .contacts__info {
     margin-right: 20px;
 }
 
-.contats__socials {
+.contacts__socials {
     display: flex;
     margin-top: 40px;
     padding: 0;
@@ -50,17 +55,11 @@
     margin-left: 20px;
 }
 
-@media (max-width: 900px) {
-    .contacts {
-        font-size: 16px;
-    }
-}
-
 @media (max-width: 800px) {
     .contacts {
         display: block;
 
-        font-size: 14px;
+        font-size: var(--text-size-main_mobile, 14px);
     }
 
     .contacts__header {

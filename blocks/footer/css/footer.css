@@ -1,11 +1,11 @@
 .footer {
     display: block;
     width: 100%;
-    max-width: 1920px;
+    max-width: var(--max-content-width, 1920px);
     margin: 0 auto;
 
     font-family: var(--text-family-main, sans-serif);
-    font-size: 14px;
+    font-size: var(--text-size-small, 14px);
     color: var(--white, #FFFFFF);
 
     background-color: var(--black, #000000);
@@ -14,7 +14,7 @@
 .footer__content {
     display: block;
     width: 100%;
-    max-width: 1200px;
+    max-width: var(--wrapper-width, 1200px);
     margin: 0 auto;
     padding: 30px 0;
 }
@@ -50,7 +50,7 @@
 .footer__menu-title {
     margin-bottom: 10px;
 
-    font-weight: 500;
+    font-weight: var(--text-weight-bold, 600);
 }
 
 .footer__menu-item {

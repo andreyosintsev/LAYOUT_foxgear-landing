@@ -1,7 +1,7 @@
 .video {
     display: block;
     width: 100%;
-    max-width: 1200px;
+    max-width: var(--wrapper-width, 1200px);
     height: auto;
 }
 

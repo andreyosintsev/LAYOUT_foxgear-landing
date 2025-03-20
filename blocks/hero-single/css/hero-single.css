@@ -1,6 +1,6 @@
 .wrapper {
     width: 100%;
-    max-width: 1920px;
+    max-width: var(--max-content-width, 1920px);
 }
 
 .hero-single {
@@ -9,14 +9,14 @@
     grid-template-rows: auto;
     grid-template-areas: "image content" "photos content";
     width: 100%;
-    max-width: 1200px;
+    max-width: var(--wrapper-width, 1200px);
     margin: 0 auto 50px;
     padding-top: 50px;
 
     color: var(--text-color-main, #000000);
     font-family: var(--text-family-main, sans-serif);
-    font-weight: 300;
-    font-size: 18px;
+    font-weight: var(--text-weight-main, 300);
+    font-size: var(--text-size-main, 16px);
 
     background-color: var(--white, #FFFFFF)
 }
@@ -30,7 +30,7 @@
 
 .hero-single__photo_active {
     outline: 1px solid var(--gray, #A6A6A6);
-    outline-offset: -1px
+    outline-offset: -1px;
 }
 
 .hero-single__content {
@@ -43,35 +43,33 @@
 
     font-family: var(--text-family-featured, sans-serif);
     font-size: 26px;
+
+    line-height: 28px;
 }
 
 .hero-single__price {
     margin-bottom: 30px;
 
     font-size: 28px;
-    font-weight: 600;
+    font-weight: var(--text-weight-bold, 600);
 }
 
 .hero-single__price_old {
     color: var(--black-light, #3C3C3C);
     font-size: 22px;
-    font-weight: 300;
+    font-weight: var(--text-weight-main, 300);
 
     text-decoration: line-through;
 }
 
 .hero-single__model {
-    font-weight: 600;    
+    font-weight: var(--text-weight-bold, 600);
 }
 
 .hero-single__button {
     width: 100%;
     max-width: 200px;
     margin: 30px 0 50px;
-}
-
-.hero-single__benefit {
-    font-size: 14px;
 }
 
 .hero-slider__cards {
@@ -115,6 +113,8 @@
         margin-bottom: 20px;
 
         font-size: 22px;
+
+        line-height: 24px;
     }
 
     .hero-single__price {
@@ -123,7 +123,7 @@
 
     .hero-single__model {
         font-size: 16px;
-        font-weight: 500;
+        font-weight: var(--text-weight-strong, 400);
     }
 
     .hero-single__image {

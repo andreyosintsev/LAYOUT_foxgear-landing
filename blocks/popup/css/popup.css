@@ -10,9 +10,9 @@
     color: var(--text-color-main, #000000);
     font-family: var(--text-family-main, sans-serif);
 
-    background-color: #FFFFFF;
+    background-color: var(--white, #FFFFFF);
     
-    border-radius: 10px;
+    border-radius: var(--border-radius-popup, 10px);
 
     overflow: hidden;
     z-index: 1000;
@@ -89,33 +89,33 @@
     margin-bottom: 15px;
     padding: 13px 19px;
 
-    color: #5B5B5B;
-    font-size: 18px;
+    color: var(--black-light, #3C3C3C);
+    font-size: var(--text-size-large, 18px);
 
-    line-height: 22px;
+    line-height: var(--text-line-height-large, 22px);
 
-    background-color: #F5F4FD;
+    background-color: var(--off-white, #F5F5F5);
 
-    border: 1px solid #F5F4FD;
-    border-radius: 5px;
+    border: 1px solid var(--off-white, #F5F5F5);
+    border-radius: var(--border-radius-input, 4px);
 
     outline: none;
 }
 
 .form__input:focus {
-    border: 1px solid #9A68FF;
+    border: 1px solid var(--black, #000000);
 
     transition: 0.3s;
 }
 
 .form__input_error {
-    color: #FF5F5F;
+    color: var(--red, #FF6666);
 
-    border: 1px solid #FF5F5F;
+    border: 1px solid var(--red, #FF6666);
 }
 
 .form__input_error::placeholder {
-    color: #FF5F5F;
+    color: var(--red, #FF6666);
 }
 
 .form__submit {
@@ -130,7 +130,7 @@
 }
 
 .form__offer {
-    color: #656565;
+    color: var(--black-light, #3C3C3C);
     font-size: 12px;
 
     line-height: 16px;

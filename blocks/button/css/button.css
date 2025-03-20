@@ -7,15 +7,15 @@
 
     color: var(--button-normal-color, #FFFFFF);
     font-family: var(--text-family-main, sans-serif);
-    font-size: 16px;
-    font-weight: 500;
+    font-size: var(--text-size-main, 16px);
+    font-weight: var(--text-weight-bold, 600);
 
-    line-height: 23px;
+    line-height: var(--text-line-height-main, 20px);
     text-align: center;
 
-    background-color: var(--black, #000000);
-    border: 2px solid var(--black, #000000);
-    border-radius: 8px;
+    background-color: var(--button-normal-background-color, #000000);
+    border: 2px solid var(--button-normal-border-color, #000000);
+    border-radius: var(--border-radius-button, 8px);
 
     outline: none;
 
@@ -23,21 +23,21 @@
 }
 
 .button:hover {
-    background-color: var(--black-ligh, #3C3C3C);
+    background-color: var(--button-normal-background-color_hover, #3C3C3C);
 
-    border: 2px solid var(--black-ligh, #3C3C3C);
+    border: 2px solid var(--button-normal-background-color_hover, #3C3C3C);
 }
 
 .button_outlined {
-    color: var(--black, #000000);
+    color: var(--button-outlined-color, #000000);
 
-    background-color: var(--white, #FFFFFF);
+    background-color: var(--button-outlined-background-color, #FFFFFF);
 
-    border: 2px solid var(--black, #000000);
+    border: 2px solid var(--button-normal-border-color, #000000);
 }
 
 .button_outlined:hover {
-    background-color: var(--gray-lighter, #E0E0E0);
+    background-color: var(--button-outlined-background-color_hover, #EFEFEF);
 }
 
 a.button {
@@ -48,7 +48,7 @@ a.button {
     .button {
         padding: 8px 10px;
 
-        font-size: 14px;
-        font-weight: 400;
+        font-size: var(--text-size-main_mobile, 14px);
+        font-weight: var(--text-weight-strong, 400);
     }
 }

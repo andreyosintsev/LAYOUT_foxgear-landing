@@ -10,12 +10,11 @@
     height: calc(var(--vh, 1vh) * 100);
     max-height: calc(var(--vh, 1vh) * 100);
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
 
     font-family: var(--text-family-main, sans-serif);
-    font-size: 14px;
+    font-size: var(--text-size-main_mobile, 14px);
+    font-weight: var(--text-weight-bold, 600);
 
     background-color: var(--white, #FFFFFF);
 
@@ -31,9 +30,9 @@
 }
 
 .menu-mobile__contacts {
-    font-weight: 600;
 
-    line-height: 20px;
+
+    line-height: var(--text-line-height-large_mobile, 20px);
 
     text-align: center;
 }
@@ -50,8 +49,6 @@
 .menu-mobile__items {
     margin: 0 0 20px 0;
     padding: 0;
-
-    font-weight: 700;
 
     line-height: 24px;
 
@@ -72,7 +69,7 @@
 .menu-mobile__link {
     padding-bottom: 3px;
 
-    color: var(--link-normal-color, #3C3C3C);
+    color: var(--black-light, #3C3C3C);
 
     text-decoration: none;
 
@@ -81,7 +78,7 @@
 }
 
 .menu-mobile__link:hover, .menu-main__link:focus {
-    color: var(--link-normal-color_hover, #3C3C3C);
+    color: var(--black-light, #3C3C3C);
 
     text-shadow: 0 0 1px var(--link-normal-color_hover, #3C3C3C);
 }
