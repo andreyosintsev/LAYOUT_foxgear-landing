@@ -5,13 +5,13 @@
 
 .hero-single {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 45% 55%;
     grid-template-rows: auto;
     grid-template-areas: "image content" "photos content";
     width: 100%;
     max-width: var(--wrapper-width, 1200px);
     margin: 0 auto 50px;
-    padding-top: 50px;
+    padding-top: 25px;
 
     color: var(--text-color-main, #000000);
     font-family: var(--text-family-main, sans-serif);

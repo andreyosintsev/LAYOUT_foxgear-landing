@@ -860,14 +860,14 @@
         <div class="wrapper">
             <div class="feedback" id="feedback">
                 <div class="feedback__wrapper">
-                    <div class="loader hidden"></div>
+                    <div class="loader feedback__loader hidden"></div>
                     <h2 class="h2 feedback__heading">
                         Хотите обновить рабочее место?
                     </h2>
                     <p class="feedback__text">
                         Посмотрите наши модели кресел, узнайте больше на сайте или свяжитесь с нами, если у вас есть вопросы.
                     </p>
-                    <form class="form feedback__form">
+                    <form class="form feedback__form" action="">
                         <input class="feedback__input feedback__input_name"
                                 name="name"
                                 placeholder="Ваше имя">
@@ -1019,13 +1019,13 @@
             </div>
         </div>
         <div class="popup hidden" id="popup-order">
-            <div class="loader hidden"></div>
+            <div class="loader popup__loader hidden"></div>
             <div class="popup__content">
                 <h2 class="h2 popup__heading">
                     Оставьте заявку
                 </h2>
                 <p class="popup__product"></p>
-                <form class="form popup__form">
+                <form class="form popup__form" action="">
                     <input class="form__input" name="name" placeholder="Ваше имя">
                     <input class="form__input" name="tel" placeholder="Телефон">
                     <input class="form__input" name="email" placeholder="E-mail">
@@ -1079,6 +1079,7 @@
     <script src="scripts/init.js"></script>
     <script src="scripts/menu-mobile.js"></script>
     <script src="scripts/popup.js"></script>
+    <script src="scripts/feedback.js"></script>
     <script src="scripts/carousels.js"></script>
 </body>
 </html>

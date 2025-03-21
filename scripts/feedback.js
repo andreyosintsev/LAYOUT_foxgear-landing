@@ -1,3 +1,5 @@
+(function() {
+
 /*
     НАСТРОЙКИ ОТПРАВКИ ФОРМЫ ОБРАТНОЙ СВЯЗИ
 */
@@ -10,171 +12,250 @@
     //Шаблон письма - https://dashboard.emailjs.com/admin/templates
     //const mailTemplateID = '';
 
+    const apiSendFeedback = 'api/sendfeedback.php';
 
-//const placeholders = {};
+    const feedbackPlaceholders = {};
+    const debug = true;
 
-document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
 
-    const formFeedback = document.querySelector('.feedback__form');
-    const loader = document.querySelector('.loader');
-
-/*
-    РАБОТА С ФОРМОЙ
-*/  
-    if (!form) {
-        console.error('Ошибка: в HTML отсутствует feedback__form');
-        return;
-    }
-
-    function resetForm() {
-        resetForm(formFeedback);
-        clearFormErrors(formFeedback);
-        hideLoader(loader);
-    }
-
-    formFeedback.addEventListener('submit', (e) => {
-        if (!checkFormErrors(e)) return;
-
-        showLoader(loader);
-
-        emailjs.sendForm(mailServiceID, mailTemplateID, form)
-        .then(
-            (response) => {
-                console.log('Письмо успешно отправлено!', response.status, response.text);
-                hidePopupAndResetForm();        
-                showPopup(body, popupSuccess, overlay);
-            },
-            (error) => {
-                console.error('Не удалось отправить письмо', error);
-                hidePopupAndResetForm();        
-                showPopup(body, popupFailed, overlay);
-            }
-        )
-        .finally(
-            () => {
-                hideLoader(loader);
-            }
+        const {formFeedback, loaderFeedback, resultFeedback} = feedbackInit(
+            '.feedback__form',
+            '.feedback__loader',
+            '.feedback__result'
         );
+
+    /*
+        РАБОТА С ФОРМОЙ
+    */
+        if (!formFeedback) {
+            console.error('Ошибка: в HTML отсутствует feedback__form');
+            return;
+        }
+
+        formFeedback.addEventListener('submit', (e) => {
+            log('submit formFeedback');
+            e.preventDefault();
+
+            if (!feedbackFormCheck(e.currentTarget)) return console.warn('Form contains errors');
+
+            feedbackSendPHP(apiSendFeedback, 'POST', formFeedback, loaderFeedback, resultFeedback);
+        });
+
+        formFeedback.addEventListener('click', (e) => feetbackFormClearErrors(formFeedback, resultFeedback));
+
+        const inputElements = formFeedback.querySelectorAll('.feedback__input');
+        inputElements.forEach(input => feedbackPlaceholders[input.name] = input.placeholder);
+
+        const elementTextarea = formFeedback.querySelector('.feedback__textarea');
+        if (elementTextarea) {
+            feedbackPlaceholders[elementTextarea.name] = elementTextarea.placeholder;
+        }
+
+        function feedbackInit(selectorForm, selectorLoader, selectorResult) {
+            log('Feedback init');
+
+            return {
+                formFeedback:   document.querySelector(selectorForm),
+                loaderFeedback: document.querySelector(selectorLoader),
+                resultFeedback: document.querySelector(selectorResult)
+            }
+        }
+
+        function feedbackSendPHP(endpoint, method, elementForm, elementLoader, elementFeedbackResult) {
+            log('Feedback send PHP');
+
+            if (!elementForm) return console.error('DOM: no form element found');
+
+            const formData = new FormData(elementForm);
+
+            if (elementLoader) feedbackShowLoader(elementLoader);
+
+            fetch(endpoint, { method: method, body: formData })
+                .then(checkFetchResponse)
+                .then(data => {
+                    console.log('Письмо успешно отправлено', data);
+                    feedbackShowResult(elementFeedbackResult, 'Ваше сообщение успешно отправлено', true);
+                    feedbackFormReset(elementForm);
+                })
+                .catch(error => {
+                    console.error('Не удалось отправить письмо', error);
+                    feedbackShowResult(elementFeedbackResult, 'Ошибка отправки сообщения', false);
+                })
+                .finally(() => {
+                    if (elementLoader) feedbackHideLoader(loaderFeedback);
+                })
+
+            function checkFetchResponse (res) {
+                return res.ok
+                ? res.json()
+                : Promise.reject(`Ошибка Fetch: ${res.status}`);
+            };
+        }
+
+        function feedbackSendEmailJS(elementForm, elementLoader, elementFeedbackResult) {
+            log('Feedback send Email JS');
+
+            if (!elementForm) return console.error('DOM: no form element found');
+
+            if (elementLoader) feedbackShowLoader(elementLoader);
+
+            emailjs.sendForm(mailServiceID, mailTemplateID, elementForm)
+                .then(response => {
+                    console.log('Письмо успешно отправлено!', response.status, response.text);
+                    feedbackShowResult(elementFeedbackResult, 'Ваше сообщение успешно отправлено', true);
+                    feedbackFormReset(elementForm);
+                },
+                error => {
+                    console.error('Не удалось отправить письмо', error);
+                    feedbackShowResult(elementFeedbackResult, 'Ошибка отправки сообщения', false);
+                }
+            )
+            .finally(
+                () => {
+                        if (elementLoader) feedbackShowLoader(elementLoader);
+                }
+            );
+    }
+
+        function feedbackFormCheck(form) {
+            log('Feedback form check');
+
+            const inputName = form.querySelector('input[name="name"]');
+            const inputEmail = form.querySelector('input[name="email"]');
+            const textareaMessage = form.querySelector('textarea[name="message"]');
+
+            const isNameValid = feedbackValueCheck(
+                inputName,
+                'Укажите ваше имя',
+                'Error: no input "name" or no name specified in formFeedback'
+            );
+
+            const isEmailValid = feedbackValueCheck(
+                inputEmail,
+                'Укажите ваш e-mail',
+                'Error: no input "email" or no email specified in formFeedback'
+            );
+
+            const isMessageValid = feedbackValueCheck(
+                textareaMessage,
+                'Введите ваш вопрос',
+                'Error: no input "message" or no message specified in formFeedback'
+            )
+
+            return isNameValid && isEmailValid && isMessageValid;
+        }
+
+        function feetbackFormClearErrors(elementForm, elementFeedbackResult) {
+            log('Clear Feedback form');
+
+            log('form: ', elementForm);
+            log(feedbackPlaceholders);
+
+            if (!elementForm) {
+                return console.error('DOM: no form element found');
+            }
+
+            const elementInputs = elementForm.querySelectorAll('.feedback__input');
+            elementInputs.forEach(input => {
+                input.classList.remove('form__input_error');
+                input.placeholder = feedbackPlaceholders[input.name] ? feedbackPlaceholders[input.name] : '';
+            });
+
+            const elementTextarea = elementForm.querySelector('.feedback__textarea');
+            if (elementTextarea) {
+                elementTextarea.placeholder = feedbackPlaceholders[elementTextarea.name]
+                    ? feedbackPlaceholders[elementTextarea.name]
+                    : '' ;
+                elementTextarea.classList.remove('form__input_error');
+            }
+
+            feedbackHideResult(elementFeedbackResult);
+        }
+
+        function feedbackFormReset(elementForm) {
+            log('Feedback form reset');
+
+            if (!elementForm) {
+                return console.error('DOM: no form element found');
+            }
+
+            elementForm.reset();
+        }
+
+        function feedbackShowResult(elementFeedbackResult, textResult, isSuccess) {
+            log('Feedback show result');
+
+            if (!elementFeedbackResult) {
+                return console.error('DOM: no feedback result element found');
+            }
+
+            if (isSuccess) {
+                elementFeedbackResult.innerHTML = textResult
+                    ? textResult
+                    : 'Спасибо за обращение, мы свяжемся с Вами в ближайшее время';
+            } else {
+                elementFeedbackResult.classList.add('feedback__result_error');
+                elementFeedbackResult.innerHTML = textResult
+                    ? textResult
+                    : 'Ошибка отправки сообщения';
+            }
+
+            elementFeedbackResult.classList.remove('hidden');
+        }
+
+        function feedbackHideResult(elementFeedbackResult) {
+            log('Feedback hide result');
+
+            if (!elementFeedbackResult) {
+                return console.error('DOM: no feedback result element found');
+            }
+
+            elementFeedbackResult.classList.remove('feedback__result_error');
+            elementFeedbackResult.classList.add('hidden');
+        }
+
+        function feedbackValueCheck(elementInput, errorMessageDisplay, errorMessageConsole) {
+            log('Feedback value check');
+
+            if (elementInput && elementInput.value) {
+                return true;
+            }
+
+            console.warn(errorMessageConsole);
+
+            elementInput.classList.add('form__input_error');
+            elementInput.placeholder = errorMessageDisplay;
+
+            return false;
+        }
+
+        function feedbackShowLoader(elementLoader){
+            log('showLoader');
+            if (!elementLoader) return console.warn('DOM: no loader element found');
+
+            elementLoader.classList.remove('hidden');
+        }
+
+        function feedbackHideLoader(elementLoader){
+            log('hideLoader');
+            if (!elementLoader) return console.warn('DOM: no loader element found');
+
+            elementLoader.classList.add('hidden');
+        }
+
+        function log(text) {
+            if (debug) {
+                console.log(text);
+            }
+        }
+
+    /*
+        ПОДГОТОВКА ОТПРАВКИ ФОРМЫ ПРИ ПОМОЩИ EMAILJS.COM
+    */
+        // emailjs.init({
+        //     publicKey: mailPublicKey,
+        // });
     });
 
-    form.addEventListener('click', (e) => clearFormErrors(e.currentTarget));
-
-    const inputs = form.querySelectorAll('.form__input');
-    inputs.forEach(input => placeholders[input.name] = input.placeholder);
-
-/*
-    ПОДГОТОВКА ОТПРАВКИ ФОРМЫ ПРИ ПОМОЩИ EMAILJS.COM
-*/
-    // emailjs.init({
-    //     publicKey: mailPublicKey,
-    // });
-});
-
-function showPopup (body, popup, overlay) {
-    body.classList.add('noscroll');
-    popup.classList.remove('hidden');
-    if (overlay) overlay.classList.remove('hidden');
-}
-
-function hidePopup (body, popup, overlay) {
-    body.classList.remove('noscroll');
-    popup.classList.add('hidden');
-    if (overlay) overlay.classList.add('hidden');
-}
-
-function setProduct (button, popup) {
-    if (!popup) {
-        return console.error('DOM: no elemen #popup-order found');
-    }
-
-    const product = button ? button.dataset.product : '';
-    const inputProduct = popup.querySelector('.form input[name="product"]');
-
-    if (!inputProduct) {
-        return console.error('DOM: no data-product specified in .button_buy');
-    }
-       
-    inputProduct.value = product;
-
-    const popupProduct = popup.querySelector('.popup__product');
-    if (!popupProduct) {
-        return console.error('DOM: no .popup__product element found');
-    }
-
-    popupProduct.innerHTML = product ? 'Модель: ' + product : '';
-}
-
-function checkFormErrors(e) {
-    e.preventDefault();
-
-    let isFormValid = true;
-
-    const form = e.currentTarget;
-    
-    const formName = form.querySelector('input[name="name"]');
-    const formTel = form.querySelector('input[name="tel"]');
-    const formEmail = form.querySelector('input[name="email"]');
-
-    if (!formName || !formName.value) {
-        console.warn('Error: no input "name" or no name specified in form');
-        
-        formName.classList.add('form__input_error');
-        formName.placeholder = 'Укажите ваше имя';
-        
-        isFormValid = false;
-    }
-
-    if (!((formTel && formTel.value) || (formEmail && formEmail.value))) {
-        console.warn('Error: no input "tel" or "e-mail" in form');
-        console.warn('Error: or no tel or e-mail specified in form');
-        
-        formTel.classList.add('form__input_error');
-        formEmail.classList.add('form__input_error');
-        formTel.placeholder = 'Укажите телефон';
-        formEmail.placeholder = 'или адрес e-mail';
-        
-        isFormValid = false;
-    }
-
-    return isFormValid;
-}
-
-function clearFormErrors(form) {
-    if (!form) {
-        return console.error('DOM: no .form element found');
-    }  
-
-    const inputs = form.querySelectorAll('.form__input');
-    inputs.forEach(input => {
-        input.classList.remove('form__input_error');
-        input.placeholder = placeholders[input.name] ? placeholders[input.name] : '';
-    });
-}
-
-function resetForm(form) {
-    if (!form) {
-        return console.error('DOM: no .form element found');
-    }          
-
-    const inputs = form.querySelectorAll('.form__input');
-    inputs.forEach(input => input.value = '');
-
-    const popupProduct = document.querySelector('.popup__product');
-    if (!popupProduct) {
-        return console.error('DOM: no .popup__product element found');
-    }
-
-    popupProduct.innerHTML = '';
-}
-
-function showLoader(loader){
-    if (!loader) return;
-
-    loader.classList.remove('hidden');
-}
-
-function hideLoader(loader){
-    if (!loader) return;
-
-    loader.classList.add('hidden');
-}
+})();
