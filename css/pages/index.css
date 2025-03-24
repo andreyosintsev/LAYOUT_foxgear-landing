@@ -49,7 +49,9 @@ body {
 .compare__table {
     max-height: 800px;
 
-    overflow: auto;
+    font-size: var(--text-size-small, 14px);
+
+    line-height: var(--text-line-height-small, 18px);
 }
 
 .showrooms {
@@ -81,12 +83,22 @@ body {
 
     .products-mini {
         padding-left: 16px;
-        gap: 0;        
+        gap: 0;
     }
 }
 
 @media (max-width: 900px) {
     .main {
         padding-top: 49px;
+    }
+
+    .compare__table {
+        max-height: 800px;
+
+        font-size: var(--text-size-small_mobile, 12px);
+
+        line-height: var(--text-line-height-small_mobile, 16px);
+
+        overflow: auto;
     }
 }
