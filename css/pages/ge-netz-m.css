@@ -51,7 +51,7 @@ body {
 }
 
 .block-image_new-style {
-    margin-bottom: 50px; 
+    margin-bottom: 50px;
 }
 
 .section-title_support__header {
@@ -115,7 +115,7 @@ body {
 
 @media (max-width: 900px) {
     .main {
-        padding-top: 49px;
+        padding-top: 69px;
     }
 
     .technology__header {
@@ -125,7 +125,7 @@ body {
     }
 }
 
-@media (max-width: 768px) {    
+@media (max-width: 768px) {
     .flex-images {
         display: block;
     }

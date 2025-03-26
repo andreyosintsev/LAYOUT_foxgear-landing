@@ -114,11 +114,11 @@ body {
 
 @media (max-width: 900px) {
     .main {
-        padding-top: 49px;
+        padding-top: 69px;
     }
 }
 
-@media (max-width: 768px) {   
+@media (max-width: 768px) {
     .single-slider__cards {
         display: block;
     }
