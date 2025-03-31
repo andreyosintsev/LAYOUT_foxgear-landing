@@ -9,10 +9,9 @@
     font-size: var(--text-size-smaller, 16px);
     font-weight: 300;
 
-    background-color: var(--black, #000000);
-
     border-radius: 10px;
     box-shadow: 4px 4px 24px rgba(4, 13, 42, 0.01);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
 
     overflow: hidden;
 }
@@ -22,13 +21,15 @@
     margin-bottom: 12px;
     padding-right: 18px;
 
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
 
     background-image: url("../images/arrow-right.svg");
     background-position: center right;
     background-repeat: no-repeat;
     background-size: 26px;
+
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1)
 }
 
 .card-showroom__link {
@@ -51,17 +52,31 @@
 }
 
 .card-showroom__link:hover .card-showroom__title {
-    color: #CCCCCC;
+    color: #FFFFFF;
 
     background-image: url("../images/arrow-right_hover.svg");
 }
 
 .card-showroom__description {
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.25);
+
     line-height: 20px;
 }
 
+.card-showroom__info-title {
+    margin: 0 0 2px;
+
+    font-weight: var(--text-weight-strong, 400);
+}
+
+.card-showroom__info {
+    margin: 0 0 2px;
+}
+
 .card-showroom__link:hover .card-showroom__description {
-    color: #CCCCCC;
+    color: #FFFFFF;
 }
 
 .card-showroom__image {
@@ -73,6 +88,12 @@
     object-fit: cover;
 
     z-index: 0;
+
+    filter: blur(1px);
+}
+
+.card-showroom__link:hover + .card-showroom__image {
+    filter: none;
 }
 
 @media (max-width: 480px) {

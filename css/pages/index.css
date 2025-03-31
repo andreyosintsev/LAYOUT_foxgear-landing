@@ -47,7 +47,7 @@ body {
 }
 
 .compare__table {
-    max-height: 800px;
+    max-height: 750px;
 
     font-size: var(--text-size-small, 14px);
 
