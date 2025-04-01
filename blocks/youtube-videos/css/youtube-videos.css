@@ -1,0 +1,38 @@
+.youtube-videos {
+    width: 100%;
+    max-width: var(--wrapper-width, 1200px);
+    padding: 50px 0;
+}
+
+.youtube-videos__title {
+    margin-bottom: 25px;
+}
+
+.youtube-videos__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+}
+
+.youtube-videos__video {
+    width: 48.5%;
+}
+
+@media (max-width: 1200px) {
+    .youtube-videos__title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .youtube-videos__content {
+        display: block;
+    }
+
+    .youtube-videos__video {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}

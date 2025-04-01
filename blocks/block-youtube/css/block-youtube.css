@@ -1,0 +1,21 @@
+.block-youtube {
+    position: relative;
+    width: 100%;
+    max-width: var(--wrapper-width, 1200px);
+    aspect-ratio: 16 / 9;
+
+    border-width: 0;
+
+    overflow: hidden;
+}
+
+.block-youtube__video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+
+    border: none;
+    border-radius: inherit;
+}
