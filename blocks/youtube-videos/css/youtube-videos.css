@@ -1,7 +1,7 @@
 .youtube-videos {
     width: 100%;
     max-width: var(--wrapper-width, 1200px);
-    padding: 50px 0;
+    padding: 100px 0;
 }
 
 .youtube-videos__title {
@@ -17,7 +17,7 @@
 }
 
 .youtube-videos__video {
-    width: 48.5%;
+    width: 32%;
 }
 
 @media (max-width: 1200px) {

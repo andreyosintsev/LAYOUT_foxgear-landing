@@ -1,0 +1,19 @@
+.publications {
+    width: 100%;
+    padding: 50px 0;
+}
+
+.publications__title {
+    margin-bottom: 25px;
+}
+
+.publications__publication {
+    margin-bottom: 25px;
+}
+
+
+@media (max-width: 1200px) {
+    .pubilications__title {
+        text-align: center;
+    }
+}

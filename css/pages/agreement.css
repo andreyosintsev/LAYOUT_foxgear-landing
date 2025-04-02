@@ -21,7 +21,7 @@ body {
     width: 100%;
     max-width: var(--wrapper-width, 1200px);
     margin: 0 auto;
-    padding: 0;
+    padding: 50px 0 100px;
 }
 
 .agreement__title {

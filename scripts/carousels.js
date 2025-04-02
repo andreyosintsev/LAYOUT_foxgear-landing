@@ -67,7 +67,7 @@ $(document).ready(function(){
 
     initCarousel();
     destroyCarousel();
-    
+
 
     $(window).resize(function() {
         initCarousel();
@@ -94,4 +94,26 @@ $(document).ready(function(){
             }
         }
     });
-});
+
+    $('.publications__publications').owlCarousel(
+    {
+        items: 2,
+        margin: 20,
+        loop: true,
+        autoplay: false,
+        autoplayTimeout: 5000,
+        nav: false,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            900: {
+                items: 2
+            },
+            1200: {
+                items: 3
+            }
+        }
+    });
+})

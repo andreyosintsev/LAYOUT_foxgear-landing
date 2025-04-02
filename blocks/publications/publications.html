@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications Block</title>
+    <link rel="stylesheet" href="../../css/common/normalize.css">
+    <link rel="stylesheet" href="../../css/common/consts.css">
+    <link rel="stylesheet" href="../../css/common/owl.carousel.min.css" >
+    <link rel="stylesheet" href="../../css/common/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../section-title/css/section-title.css">
+    <link rel="stylesheet" href="../card-publication/css/card-publication.css">
+    <link rel="stylesheet" href="css/publications.css">
+</head>
+<body style="background-color: yellowgreen; padding: 10px;">
+    <section class="publications">
+        <h2 class="section-title publications__title">Публикации о нас</h2>
+        <div class="publications__publications owl-carousel owl-theme">
+            <div class="publication card-publication">
+                <div class="publication__header">
+                    <img class="publication__logo" style="display: inline-block; width: auto;"
+                    src="../../images/publications/goharu.svg"
+                    alt="Логотип Goha.ru">
+                </div>
+                <div class="publication__excerpt">
+                    Foxgear NETZ X — чрезвычайно удобное кресло с огромным количеством регулировок и поддержек для максимального комфорта. Дополнительным бонусом выступают используемые для обивки сетка и ткань, а для работяг и ПК-геймеров есть довольно удобный столик с приличным количеством места для различных гаджетов. В общем и целом, Foxgear NETZ X однозначно заслуживает вашего внимания при выборе нового трона для работы и/или игр.
+                </div>
+                <a class="publication__link"
+                    href="https://www.goha.ru/foxgear-netz-x-kreslo-kotoroe-zamenit-vash-rabochij-stol-dyZqOg"
+                    title="Обзор кресла FoxGear Netz модель X"
+                    target="_blank">
+                </a>
+            </div>
+            <div class="publication card-publication">
+                <div class="publication__header">
+                    <img class="publication__logo" style="display: inline-block; width: auto;"
+                        src="../../images/publications/ixbt-live.svg"
+                        alt="Логотип ixbt.ru live"
+                        >
+                </div>
+                <div class="publication__excerpt">
+                    FoxGear NETZ модель X — эргономичное компьютерное кресло, которое имеет огромное количество настроек под пользователя: подлокотники, подголовник, спинка, поясничный упор, сиденье, упор для ног, высота; всё это настраивается под конкретного пользователя.
+                </div>
+                <a class="publication__link"
+                    href="https://www.ixbt.com/live/periphery/tolko-kofe-ne-varit-obzor-ergonomichnogo-kompyuternogo-kresla-foxgear-netz-model-x.html"
+                    title="Обзор кресла FoxGear Netz модель X"
+                    target="_blank">
+                </a>
+                </a>
+            </div>
+            <div class="publication card-publication">
+                <div class="publication__header">
+                    <img class="publication__logo" style="display: inline-block; width: auto;"
+                        src="../../images/publications/dns-club.svg"
+                        alt="Логотип dns-club">
+                </div>
+                <div class="publication__excerpt">
+                    FoxGear NETZ модель X — кресло с большим количеством регулировок. Даже не так. FoxGear NETZ модель X — с ОЧЕНЬ большим количеством регулировок. Настроить можно практически все, что придет в голову. Кроме того, есть задел на будущее, как-то совместить эту всю свободу, с массажными блоками, хотя бы для поясницы или шеи.
+                </div>
+                <a class="publication__link"
+                    href="https://club.dns-shop.ru/review/t-72-igrovyie-kresla/139513-obzor-ergonomichnogo-kresla-foxgear-netz-model-x/?ysclid=m8posm2qi6257282004&utm_referrer=https%3A%2F%2Fyandex.ru%2F"
+                    title="Обзор кресла FoxGear Netz модель X"
+                    target="_blank">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../scripts/util/jquery-3.7.1.min.js"></script>
+    <script src="../../scripts/util/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.publications__publications').owlCarousel(
+            {
+                items: 2,
+                margin: 20,
+                loop: true,
+                autoplay: false,
+                autoplayTimeout: 5000,
+                nav: false,
+                dots: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    900: {
+                        items: 2
+                    },
+                    1200: {
+                        items: 4
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
