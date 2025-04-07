@@ -1,14 +1,14 @@
 <?php
 
-    $site       = 'foxgear.ru';
-    $from       = 'request@foxgear.ru';
-    $to         = 'kintaro_oe@inbox.ru';
+    $site       = 'foxgear.store';
+    $from       = 'info@foxgamer.ru';
+    $to         = 'info@foxgamer.ru';
 
     $name       = $_POST['name'];
     $email      = $_POST['email'];
     $question   = $_POST['message'];
 
-    $subject = mb_encode_mimeheader('Вопрос с сайта FoxGear','UTF-8', 'B');
+    $subject = mb_encode_mimeheader('Вопрос с сайта foxgear.store','UTF-8', 'B');
 
     $headers = "From: ". $from. "\r\n";
     $headers .= "Reply-To: ". $from. "\r\n";

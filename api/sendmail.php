@@ -2,7 +2,7 @@
 
     $site       = 'foxgear.site';
     $from       = 'info@foxgamer.ru';
-    $to         = 'info@foxgear.site';
+    $to         = 'info@foxgamer.ru';
 
     $name       = $_POST['name'];
     $tel        = $_POST['tel'];
