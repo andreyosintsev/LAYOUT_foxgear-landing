@@ -25,7 +25,8 @@
     grid-area: image;
     width: 100%;
     height: auto;
-    margin-right: 2%;
+    /* margin-right: 2%; */
+    margin-right: 5%;
 }
 
 .hero-single__photo_active {
@@ -35,7 +36,8 @@
 
 .hero-single__content {
     grid-area: content;
-    padding-left: 2%;
+    /* padding-left: 2%; */
+    padding-left: 5%;
 }
 
 .hero-single__title {

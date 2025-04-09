@@ -1,0 +1,124 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--text-color-main, #000000);
+    font-family: var(--text-family-main, sans-serif);
+    font-size: var(--text-size-main, 16px);
+    font-weight: var(--text-weight-main, 300);
+
+    line-height: var(--text-line-height-main, 20px);
+
+    scrollbar-width: thin;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.section-title_hero {
+    padding-top: 20px;
+    margin-bottom: 0;
+
+    font-size: 60px;
+    line-height: 60px;
+
+    text-align: center;
+}
+
+.section-title__subtitle {
+    font-size: 26px;
+}
+
+.hero-slider__cards {
+    width: 100%;
+    max-width: var(--max-content-width, 1920px);
+    padding: 10px 0 0;
+    margin: 0 0 100px;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: var(--wrapper-width, 1200px);
+    margin: 0 auto;
+    padding: 0;
+}
+
+.section-table {
+    margin-bottom: 50px;
+    padding-top: 50px;
+
+    text-align: center;
+}
+
+.section-table__header {
+    font-size: 40px;
+    text-align: center;
+}
+
+
+.block-image_compare {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.section-properties__header {
+    font-weight: 900;
+
+    text-align: left;
+}
+
+.contacts {
+    padding-top: 90px;
+    margin-bottom: 90px;
+}
+
+@media (max-width: 1200px) {
+    .content {
+        padding: 124px 16px 70px;
+    }
+
+    .wrapper {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .technology {
+        margin-bottom: 20px;
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .main {
+        padding-top: 69px;
+    }
+
+    .technology__header {
+        font-size: 20px;
+
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .flex-images {
+        display: block;
+    }
+
+    .flex-images__item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .flex-images__image {
+        margin-bottom: 10px;
+    }
+
+    .flex-images__title {
+        font-size: var(--text-size-large_mobile, 16px);
+
+        line-height: var(--text-line-height-large_mobile, 20px);
+    }
+}
