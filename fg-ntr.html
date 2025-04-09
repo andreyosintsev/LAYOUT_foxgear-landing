@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="blocks/button/css/button.css?ver=1">
     <link rel="stylesheet" href="blocks/card-single/css/card-single.css?ver=1">
     <link rel="stylesheet" href="blocks/single-slider/css/single-slider.css?ver=1">
-    <link rel="stylesheet" href="blocks/feedback/css/feedback.css?ver=1">
+    <link rel="stylesheet" href="blocks/accordeon/css/accordeon.css?ver=1">
     <link rel="stylesheet" href="blocks/contacts/css/contacts.css?ver=1">
     <link rel="stylesheet" href="blocks/popup/css/popup.css?ver=1">
     <link rel="stylesheet" href="blocks/footer/css/footer.css?ver=1">
@@ -234,7 +234,7 @@
             <section class="section-table" id="any-space">
                 <h2 class="section-title section-table__header">Столик для ноутбука для любого пространства</h2>
                 <p class="post__p">
-                    Ваш портативный столик для ноутбука легко крепится к креслам серии FoxGear NETZ. Очень лёгкий, но прочный, оне превращает любое пространство (домашний офис, диван, балкон) в современную и эргономичную рабочую зону.
+                    Ваш портативный столик для ноутбука легко крепится к креслам серии FoxGear NETZ. Очень лёгкий, но прочный, оне превращает любое пространство (домашний офис, спальню, балкон) в современную и эргономичную рабочую зону.
                 </p>
             </section>
         </div>
@@ -262,7 +262,7 @@
             <section class="section-table" id="ajustable">
                 <h2 class="section-title section-table__header">Регулируемый ноутбучный столик для кресла</h2>
                 <p class="post__p">
-                    Установите, наклоните, работает! Этот столик для ноутбука за считанные секунды крепится к креслам с откидывающейся спинкой FoxGear NETZ. Отрегулируйте высоту (5 уровней) и угол установки для вашего удобства, когда вы сидите прямо, откинулись к спинке или отдыхаете.
+                    Установите, наклоните, работает! Этот столик для ноутбука за считанные секунды крепится к креслам с откидывающейся спинкой FoxGear NETZ. Отрегулируйте угол наклона ноутбука (5 положений) и угол установки для вашего удобства, когда вы сидите прямо, откинулись к спинке или отдыхаете.
                 </p>
             </section>
             <div class="block-image">
@@ -309,8 +309,11 @@
                title="Сравнение моделей"></a>
         </div>
         <div class="wrapper">
-            <section class="section-properties" id="any-space">
+            <section class="section-properties" id="properties">
                 <h2 class="section-title section-properties__header">Технические характеристики</h2>
+                <p class="post__p">
+                    Примечание: столик совместим только с креслами FoxGear NETZ
+                </p>
             </section>
             <div class="block-image">
                 <picture>
@@ -322,6 +325,35 @@
                         alt="Технические характеристики ноутбучного столика для кресла FoxGear NETZ">
                 </picture>
             </div>
+            <section class="accordeon">
+                <h2 class="section-title accordeon__title">Вопросы и ответы</h2>
+                <div class="accordeon__content">
+                    <div class="accordeon__item">
+                        <div class="accordeon__item-title">
+                            Почему ноутбучный столик для кресла с откидывающейся спинкой FoxGear NETZ лучше, чем обычный стол?
+                        </div>
+                        <div class="accordeon__item-content">
+                            У ноутбучного столика предусмотрены крепления непосредственно к подлокотникам кресла, что позволяет регулировать угол и высоту для комфортной работы с ноутбуком даже в положении лёжа.
+                        </div>
+                    </div>
+                    <div class="accordeon__item">
+                        <div class="accordeon__item-title">
+                            Выдержит ли небольшой столик для ноутбука тяжёлые устройства или несколько аксессуаров?
+                        </div>
+                        <div class="accordeon__item-content">
+                            Да! Этот небольшой столик для ноутбука компактный, но очень прочный, с усиленной поверхностью, способной выдерживать ноутбуки весом до 7 килограммов. Таже у него нескользящие кромки, чтобы мышь не падала. Ещё на него можно поставить планшет, положить мобильный телефон и чашку.
+                        </div>
+                    </div>
+                    <div class="accordeon__item">
+                        <div class="accordeon__item-title">
+                            Как столик для ноутбука с креплением на кресло повышает удобство работы?
+                        </div>
+                        <div class="accordeon__item-content">
+                            Этот столик крепится к подлокотникам кресла FoxGear NETZ, что позволяет комфортно работать при любом положении спинки - в вертикальном, наклонном, откинутом. Пять установок угла наклона помогает адаптироваться к наклону спинки так, чтобы экран ноутбука всегда оставался перед глазами. Это также уменьшает утомление шеи. Кроме того, подставка с отверстиями под ноутбук улучшает вентиляцию ноутбука, уменьшая его нагрев, что просто необходимо во время интенсивной работы.
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
         <div class="wrapper">
             <section class="contacts" id="contacts">
@@ -525,6 +557,7 @@
     <script src="scripts/hero-single.js"></script>
     <script src="scripts/single-carousels.js"></script>
     <script src="scripts/back-to-top.js"></script>
+    <script src="scripts/accordeon.js"></script>
     <script>
         $('.hero-slider__cards').owlCarousel(
             {
