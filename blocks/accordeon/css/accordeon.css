@@ -46,10 +46,10 @@
     display: block;
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 16px;
     width: 24px;
     height: 16px;
-    transform: translateY(calc(-50% - 5px));
+    transform: translateY(calc(-50% - 5px)) rotate(180deg);
 
     background: url(../images/arrow_up.svg);
     background-size: 24px 16px;
@@ -60,7 +60,7 @@
 }
 
 .accordeon__item_active .accordeon__item-title::after {
-    transform: translateY(calc(-50% - 5px)) rotate(180deg);
+    transform: translateY(calc(-50% - 5px));
 }
 
 .accordeon__item-content {
@@ -83,12 +83,16 @@
 
 @media (max-width: 900px) {
     .accordeon__item-title {
-        padding: 0 46px 10px 0;
+        padding: 0 24px 10px 0;
     }
 
     .accordeon__item-content {
         max-height: 0;
         padding: 10px 0 0 0;
     }
+
+    .accordeon__item-title::after {
+        right: 0;
+    };
 }
 

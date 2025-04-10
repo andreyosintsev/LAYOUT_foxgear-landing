@@ -45,6 +45,7 @@
 
     font-family: var(--text-family-featured, sans-serif);
     font-size: 26px;
+    font-weight: 600;
 
     line-height: 28px;
 }

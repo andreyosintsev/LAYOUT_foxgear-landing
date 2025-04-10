@@ -19,20 +19,6 @@
     src: url("../../fonts/Montserrat-SemiBold.otf") format("truetype");
     font-display: swap;
 }
-/*Roboto Light*/
-@font-face {
-    font-family: 'Roboto';
-    font-weight: 300;
-    src: url("../../fonts/Roboto-Light.ttf") format("truetype");
-    font-display: swap;
-}
-/*Roboto Regular*/
-@font-face {
-    font-family: 'Roboto';
-    font-weight: 400;
-    src: url("../../fonts/Roboto-Regular.ttf") format("truetype");
-    font-display: swap;
-}
 /*Roboto Medium*/
 @font-face {
     font-family: 'Roboto';
