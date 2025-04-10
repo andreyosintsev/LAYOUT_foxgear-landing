@@ -1,6 +1,5 @@
 (function() {
     document.addEventListener('DOMContentLoaded', () => {
-        console.log('DOM Loaded');
         function setFullHeight() {
             const vh = window.innerHeight * 0.01;
             document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -25,7 +24,6 @@
             /* Если видео не autoplay то загрузим его позже */
 
             if (!video.autoplay) {
-                console.log('Not autoplay');
                 sources.forEach(source => {
                     source.src = source.dataset.src;
                     video.load();

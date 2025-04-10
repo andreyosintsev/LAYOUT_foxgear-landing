@@ -93,11 +93,6 @@ body {
         padding-left: 16px;
         padding-right: 16px;
     }
-
-    .technology {
-        margin-bottom: 20px;
-        padding-top: 20px;
-    }
 }
 
 @media (max-width: 900px) {
@@ -121,33 +116,6 @@ body {
         font-size: 30px;
 
         line-height: 36px;
-    }
-
-    .technology__header {
-        font-size: 20px;
-
-        line-height: 24px;
-    }
-}
-
-@media (max-width: 768px) {
-    .flex-images {
-        display: block;
-    }
-
-    .flex-images__item {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .flex-images__image {
-        margin-bottom: 10px;
-    }
-
-    .flex-images__title {
-        font-size: var(--text-size-large_mobile, 16px);
-
-        line-height: var(--text-line-height-large_mobile, 20px);
     }
 }
 
