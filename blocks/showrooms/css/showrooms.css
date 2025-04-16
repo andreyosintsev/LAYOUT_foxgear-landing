@@ -12,12 +12,12 @@
     align-items: flex-start;
     width: 100%;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .showrooms__card {
-    width: 32%;
-    max-width: 600px;
-    margin-bottom: 30px;
+    flex: 1 0 calc(33% - 20px);
+
 }
 
 .reviews {

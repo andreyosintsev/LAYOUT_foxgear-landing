@@ -1,6 +1,6 @@
 .card-showroom {
     position: relative;
-    display: block;
+    display: flex;
     height: 280px;
     padding: 30px;
 
@@ -60,7 +60,7 @@
 .card-showroom__description {
     border-radius: 5px;
     padding: 5px;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.5);
 
     line-height: 20px;
 }
