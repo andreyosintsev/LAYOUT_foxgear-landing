@@ -9,6 +9,12 @@
     line-height: var(--text-line-height-small, 18px);
 
     box-shadow: 0px 5px 20px -8px #0000001F;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.card-product:hover {
+    box-shadow: 4px 4px 24px rgba(4, 4, 4, 0.1);
 }
 
 .card-product__image-img {
@@ -64,7 +70,7 @@
 @media (max-width: 900px) {
     .card-product__title {
         margin-bottom: 10px;
-    
+
         font-size: 18px;
     }
 }

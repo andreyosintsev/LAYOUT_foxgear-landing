@@ -14,6 +14,12 @@
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
 
     overflow: hidden;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.card-showroom:hover {
+    box-shadow: 4px 4px 24px rgba(4, 4, 4, 0.3);
 }
 
 .card-showroom__title {
