@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: 45% 55%;
     grid-template-rows: auto;
-    grid-template-areas: "image content" "photos content";
+    grid-template-areas: "image content" "gallery content";
     width: 100%;
     max-width: var(--wrapper-width, 1200px);
     margin: 0 auto 50px;
@@ -29,9 +29,58 @@
     margin-right: 5%;
 }
 
+.hero-single__gallery {
+    grid-area: gallery;
+    position: relative;
+}
+
+.hero-single__gallery-button {
+    position: absolute;
+    display: flex;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    flex: 0 0 auto;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    background-size: 12px 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: none;
+
+    cursor: pointer;
+    outline: none;
+
+    z-index: 10;
+
+    transition: background-color 0.2s ease-in-out;
+}
+
+.hero-single__gallery:hover .hero-single__gallery-button {
+    background-color: var(--gray-light, #EFEFEF);
+
+    opacity: 0.5;
+}
+
+.hero-single__gallery-button_prev {
+    left: 0;
+
+    background-image: url("../images/arrow-left.svg");
+}
+
+.hero-single__gallery-button_next {
+    right: 0;
+
+    background-image: url("../images/arrow-right.svg");
+}
+
 .hero-single__photo_active {
-    outline: 1px solid var(--gray, #A6A6A6);
-    outline-offset: -1px;
+    /* outline: 1px solid var(--gray, #A6A6A6);
+    outline-offset: -1px; */
 }
 
 .hero-single__content {
@@ -41,7 +90,7 @@
 }
 
 .hero-single__title {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 
     font-family: var(--text-family-featured, sans-serif);
     font-size: 26px;
@@ -51,7 +100,7 @@
 }
 
 .hero-single__price {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
     font-size: 28px;
     font-weight: var(--text-weight-bold, 600);
@@ -65,7 +114,14 @@
     text-decoration: line-through;
 }
 
+.hero-single__form {
+    margin-bottom: 30px;
+}
+
 .hero-single__model {
+    margin-bottom: 30px;
+
+    font-size: var(--text-size-large, 18px);
     font-weight: var(--text-weight-bold, 600);
 }
 
@@ -73,21 +129,6 @@
     width: 100%;
     max-width: 200px;
     margin: 30px 0 50px;
-}
-
-.hero-slider__cards {
-    width: calc(100% - 140px);
-
-    margin: 0 20px;
-}
-
-.hero-slider__link {
-    display: block;
-}
-
-.hero-slider__image {
-    width: 100%;
-    height: auto;
 }
 
 .hero-single__benefits {

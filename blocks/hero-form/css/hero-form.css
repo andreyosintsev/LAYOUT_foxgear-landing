@@ -1,0 +1,119 @@
+.hero-form {
+    display: block;
+    width: 100%;
+    padding: 0;
+
+    color: var(--text-color-main, #000000);
+    font-family: var(--text-family-main, sans-serif);
+    font-size: var(--text-size-main, 16px);
+    font-weight: var(--text-weight-main, 400);
+
+    line-height: var(--text-line-height-large, 24px);
+
+    background-color: var(--background-color-main, #FFFFFF);
+}
+
+.hero-form__fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    padding: 0;
+
+    border: 0;
+}
+
+.hero-form__legend {
+    margin-bottom: 10px;
+
+    font-size: var(--text-size-legend, 18px);
+    font-weight: var(--text-weight-bold, 700);
+
+    line-height: 27px;
+}
+
+.hero-form__radio-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-form__radio-button {
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.hero-form__label {
+    display: block;
+    width: 100%;
+
+    margin: 0;
+    padding: 8px;
+
+    font-size: 15px;
+
+    line-height: 1.2;
+
+    text-align: center;
+
+    border: 3px solid transparent;
+    border-radius: var(--border-radius-button, 5px);
+
+    box-shadow: 0 0 0 1px #868A89;
+
+    cursor: pointer;
+}
+
+.hero-form__radio {
+    appearance: none;
+    position: absolute;
+    opacity: 0;
+}
+
+.hero-form__radio-button .hero-form__radio:checked + .hero-form__label {
+    background-color: var(--gray-light, #D2D7D7);
+    outline: none;
+    box-shadow: 0 0 0 2px var( --gray-darker, #252525);
+}
+
+.hero-form__radio:disabled + .hero-form__label {
+    cursor: not-allowed;
+    opacity: 0.5;
+    box-shadow: none;
+    outline: none;
+    background-color: var(--background-disabled, #F0F0F0);
+    color: var(--text-color-disabled, #999999);
+    border-color: transparent;
+}
+
+.hero-form__button {
+    width: 100%;
+    max-width: 200px;
+}
+
+.hero-form__benefits {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .hero-form__legend {
+        margin-bottom: 12px;
+
+        font-size: var(--text-size-legend_mobile, 16px);
+
+        line-height: 24px;
+    }
+
+    .hero-form__label {
+        padding: 4px;
+    }
+
+    .hero-form__radio-group {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
