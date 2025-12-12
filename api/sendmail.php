@@ -1,8 +1,12 @@
 <?php
 
-    $site       = 'foxgear.site';
-    $from       = 'info@foxgamer.ru';
-    $to         = 'info@foxgamer.ru';
+    // $site       = 'foxgear.site';
+    // $from       = 'info@foxgamer.ru';
+    // $to         = 'info@foxgamer.ru';
+
+    $site       = 'bestweb.site';
+    $from       = 'info@bestweb.site';
+    $to         = 'kintaro_oe@inbox.ru';
 
     $name       = $_POST['name'];
     $tel        = $_POST['tel'];
