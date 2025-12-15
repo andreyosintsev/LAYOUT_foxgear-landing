@@ -100,7 +100,7 @@
     filter: blur(1px);
 }
 
-.card-showroom:hover + .card-showroom__image {
+.card-showroom:hover .card-showroom__image {
     filter: none;
 }
 
