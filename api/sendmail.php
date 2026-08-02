@@ -1,18 +1,14 @@
 <?php
 
-    // $site       = 'foxgear.site';
-    // $from       = 'info@foxgamer.ru';
-    // $to         = 'info@foxgamer.ru';
-
-    $site       = 'bestweb.site';
-    $from       = 'info@bestweb.site';
-    $to         = 'kintaro_oe@inbox.ru';
+    $site       = 'foxgear.site';
+    $from       = 'info@foxgamer.ru';
+    $to         = 'info@foxgamer.ru';
 
     $name       = $_POST['name'];
     $tel        = $_POST['tel'];
     $email      = $_POST['email'];
     $product    = $_POST['product'];
-    $promocode  = $_POST['promocode'];
+    $promocode  = empty($_POST['promocode']) ? 'без промокода' : $_POST['promocode'];
 
     $subject = mb_encode_mimeheader('Заявка с сайта FoxGear','UTF-8', 'B');
 

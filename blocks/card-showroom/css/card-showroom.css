@@ -100,6 +100,10 @@
     filter: blur(1px);
 }
 
+ .card-showroom__image_no-filter {
+    filter: none;
+}
+
 .card-showroom:hover .card-showroom__image {
     filter: none;
 }
