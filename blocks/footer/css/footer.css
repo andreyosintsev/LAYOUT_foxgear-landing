@@ -53,6 +53,7 @@
 }
 
 .footer__menu-title {
+    margin-top: 20px;
     margin-bottom: 10px;
 
     font-weight: var(--text-weight-bold, 600);
